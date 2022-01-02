@@ -1,54 +1,51 @@
-.main{
-    width: 100%;
+
+.header h1{
+    color: rgb(226, 0, 0);
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+  
 }
-.navbar{
-    width: 1200px;
-    height: 75px;
-    margin: auto;
-}
-.icon{
-    width: 100%;
-    float: left;
-    height: 70px;
-}
-.logo{
+.header h2{
+    text-align: center;
     color: rgba(161, 7, 7, 0.829);
     font-family: Arial;
-    text-align: center;
+    margin-top: 0px;
     align-content: center;
     float: auto;
-    padding-top: 10px;
-}
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;  
-}
-ul{
-    align-content: center;
-    width: 1170px;
-    height: 50px;
-    background: linear-gradient(to top,rgba(161, 7, 7, 0.829)50%,rgba(161, 7, 7, 0.829)50%);
-    display: flex;
-    margin-top: 70px;
     
 }
-ul li{
+.header h3{
+    text-align: center;
+    color: rgba(161, 7, 7, 0.829);
+    font-family: Arial;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    align-content: center;
+    float: auto;
+}
+.placeh3{
+    background-color: #160d0d;
+    margin-top: 0;
+   
+}
+.placeh3 ul{
     list-style: none;
-    margin-top: 16px;
-    margin-left: 100px;
-    font-size: 15px;
+    margin: 60;
+    padding:100;
+    overflow: hidden;
+    align-items: center;
 }
-ul li a{
-    text-decoration: wavy;
-    color: rgba(255, 255, 255, 0.829);
-    font-family: sans-serif;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
-    padding-left: 60px;
+.placeh3 li{
+    float: left;
+    z-index: auto;
 }
-ul li a:hover{
-    color: rgb(0, 0, 0);
+.placeh3 li a{
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .table{
@@ -58,7 +55,7 @@ ul li a:hover{
     padding-left: 500px;
     float: left;
     align-content: center;
-    margin-top: 150px;
+    margin-top: 0px;
 }
 .heading{
     text-align: center;
