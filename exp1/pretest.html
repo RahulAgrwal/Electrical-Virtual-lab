@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Virtual lab</title>
+<link rel="stylesheet" type="text/css" href="exp1.css">
+</head>
+<body background="#ffffff">
+    
+    <div class="header"><img style="float: left; margin-top: 15px; height: 40px;" src="https://stores.dpuerp.in/images/DPU.png">
+        <h2 >DR. D. Y. PATIL INSTITUTE OF TECHNOLOGY</h2>
+        <h3 >Sant Tukaram Nagar, Pimpri, Pune</h3>
+        <h2 >Department Of Electronics and Telecommunication Engineering</h2>
+        <h2 >Electrical Circuit Virtual Lab</h2>
+    </div>
+    <div class="placeh">
+        <ul>
+            <li ><a  href="/index.html">Home</a></li>
+          <li ><a  href="/objectives.html">Learning Objectives</a></li>
+          <li><a href="Broad Goal.html">Broad Goal</a></li>
+          <li><a href="AboutUs.html">AboutUs</a></li>
+        </ul>
+    </div>
+    
+    <div class="Exp1view">
+        <a  href="/index.html">Electrical Circuit Virtual Lab</a> >
+        <a  href="aim.html">To verify Kirchhoff’s Laws: Kirchhoff’s Current Law, Kirchhoff’s Voltage Law</a> > 
+        <a  href="pretest.html">Pre Test</a>
+    </div>
+
+    <div class="placeh2">
+        <ul>
+          <li ><a  href="aim.html">Aim</a></li>
+          <li><a href="Theory.html">Theory</a></li>
+          <li><a href="pretest.html">Pre Test</a></li>
+          <li><a href="Procedure.html">Procedure</a></li>
+          <li><a href="Simulator.html">Simulator</a> </li>
+          <li><a href="postTest.html">Post Test</a></li>
+          <li><a href="References.html">References</a></li>
+        </ul>
+    </div>
+
+    <div id="whole_body" style=" background-color:#ceb5da; margin-left :11vw; margin-right: 0px; margin-top:0px;height:auto; width:1150px;margin-bottom: 20px" >
+        <div style="font-size:18px; text-align:justify;padding-top: 5px">
+        <div style="font-size:25px; text-align:center;padding-top: 5px;margin-right: 5px;">
+                 <b> Answer the following questions</b>
+     </div>
+    <p>
+    
+    <form name="quiz">
+    
+    <p>
+    
+    <b>Question 1.
+    
+    <br>A junction whell two (or) more than two network elements meet is known as a ______________<br></b>
+    
+    <blockquote>
+    
+    <input type="radio"  name="q1" value="Node">Node<br>
+    
+    <input type="radio" name="q1" value="Branch">Branch<br>
+    
+    <input type="radio" name="q1" value="Loop">Loop<br>
+    
+    <input type="radio" name="q1" value="Mesh">Mesh<br>
+    
+    
+    </blockquote>
+    
+    <p><b>
+    
+    <hr>
+    
+    Question 2.
+    
+    <br>The basic laws for analyzing an electric circuit are :-<br></b>
+    
+    <blockquote>
+    
+    <input type="radio" name="q2" value="Einstein’s">Einstein’s theory<br>
+    
+    <input type="radio" name="q2" value="Newtons">Newtons laws<br>
+    
+    <input type="radio" name="q2" value="Kirchhoff’s">Kirchhoff’s laws<br>
+    
+    <input type="radio" name="q2" value="Faradays">Faradays laws<br>
+    
+    </blockquote>
+    
+    <p><b>
+    
+    <hr>
+    
+    <b>Question 3.
+    
+        <br>In a circuit, the current is directly proportional to __________.<br></b>
+        
+        <blockquote>
+        
+        <input type="radio"  name="q3" value="temp">Temperature<br>
+        
+        <input type="radio" name="q3" value="vtg">Voltage<br>
+        
+        <input type="radio" name="q3" value="Res">Resistance<br>
+        
+        <input type="radio" name="q3" value="Resi">Resistivity<br>
+        
+        
+        </blockquote>
+        
+        <p><b>
+        
+        <hr>
+    
+    
+    
+    
+    <b>Question 4.
+    
+            <br> All _____________ are loops but _______________ are not meshes<br></b>
+            
+            <blockquote>
+            
+            <input type="radio"  name="q4" value="LM">Loops, Meshes<br>
+            
+            <input type="radio" name="q4" value="ML">Meshes,Loops<br>
+            
+            <input type="radio" name="q4" value="BL">Branches, Loops<br>
+            
+            <input type="radio" name="q4" value="NB">Nodes,Branches<br>
+            
+            
+            </blockquote>
+            
+     <p><b>
+            
+     <hr>
+        
+    
+    
+    
+    
+    
+    <p><b>
+    
+    <input type="button"value="Grade Me"onClick="getScore(this.form);">
+    
+    <input type="reset" value="Clear"><p>
+    
+    Number of score out of 4 = <input type= text size 2 name= "mark">
+    
+    Score in percentage = <input type=text size=2 name="percentage"><br>
+    
+    </form>
+    
+    <p>
+    
+    <form method="post" name="Form" onsubmit="" action="">
+    
+    </form>
+    
+    </body>
+    
+    <script>
+    
+    var numQues = 4;
+    
+    var numChoi = 4;
+    
+    var answers = new Array(2);
+    
+    answers[0] = "Node";
+    
+    answers[1] = "Kirchhoff’s";
+    
+    answers[2] = "vtg";
+    
+    answers[3]="ML";
+    
+    
+    function getScore(form) {
+    
+    var score = 0;
+    
+    var currElt;
+    
+    var currSelection;
+    
+    for (i=0; i<numQues; i++) {
+    
+    currElt = i*numChoi;
+    
+    answered=false;
+    
+    for (j=0; j<numChoi; j++) {
+    
+    currSelection = form.elements[currElt + j];
+    
+    if (currSelection.checked) {
+    
+    answered=true;
+    
+    if (currSelection.value == answers[i]) {
+    
+    score++;
+    
+    break;
+    
+    }
+    
+    }
+    
+    }
+    
+    if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+    
+    }
+    
+    var scoreper = Math.round(score/numQues*100);
+    
+    form.percentage.value = scoreper + "%";
+    
+    form.mark.value=score;
+    
+    }
+    
+    </script>
+    </div>
+
+
+
+
+</body>
+</html>

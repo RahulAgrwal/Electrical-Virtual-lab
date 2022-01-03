@@ -70,7 +70,6 @@
     float: left;
     position:sticky;
     top: 47px;
-  
 }
 .placeh2 ul{
     list-style: none;
@@ -91,7 +90,7 @@
     z-index: index;
 }
 .placeh2 li a{
-    
+  border-left-color: #3c8dbc;
   display: block;
   color: rgb(0, 0, 0);
   text-align: left;
@@ -109,4 +108,16 @@
     width: 80vw;
     margin-left: 12vw;
 
+}
+.Aim{
+    margin-left: 12vw;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+
+}
+.centre{
+    align-content: center;
+    margin-left: 500px;
 }
