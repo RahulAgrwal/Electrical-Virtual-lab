@@ -58,55 +58,65 @@
   font-weight: bold;
 }
 
-
-
 .placeh2{
-    display: block;
     background-color: rgb(207, 18, 18);
     font:13px/1.5 Verdana;
     width: 150px;
-    height: 100%;
-    margin-right: auto;
     float: left;
     position:sticky;
     top: 47px;
+    margin-left: 0px;
+    border-radius: 6px;
+    
 }
 .placeh2 ul{
-    list-style: none;
-    margin: 10px;
-    padding:6px;
-    overflow: hidden;
-    align-items: left;
-    text-align: center;
-    width:100%;
-    height: 100%;
-    margin-top: 0;
-    padding-top:0; 
-    padding-right: 0px;
-   
-}
-.placeh2 li{
+    position: relative;
+    width: 100%;
+    padding: 0px;
     
-    z-index: index;
 }
-.placeh2 li a{
+.placeh2 ul li{
+   list-style: none;
+    box-shadow: 0 5px 25px rgb(0,0,0,.1);
+    width: 100%;
+}
+
+.placeh2 ul li a{
+    width:80%;
   border-left-color: #3c8dbc;
-  display: block;
+  display:inline-block;
   color: rgb(0, 0, 0);
   text-align: left;
-  padding: 14px 0px;
+  padding: 10px;
   text-decoration: none;
   transition: 0.4s;
   font-size: medium;
+  padding: 10px;
 }
+
 .placeh2 ul li :hover{
-    padding-left: 3px;
+    padding-right:3px;
+    transform: scale(1.1);
+    z-index: 100;
+    background: #25bcff;
+    background-position:center ;
+    box-shadow: 0 5px 25px rgb(0,0,0,.1);
+    border-radius: 5px;
+    border-left: 10px solid #3c8dbc ;
+}
+.placeh2 ul li :hover a{
+    border-left: 10px solid #3c8dbc ;
+}
+.placeh2 ul li a:active{
+    border-left: 10px solid #3c8dbc ;
+    background: yellow;
 }
 
 .temp{
     margin-top: 10px;
     width: 80vw;
     margin-left: 12vw;
+    
 
 }
 .Aim{
