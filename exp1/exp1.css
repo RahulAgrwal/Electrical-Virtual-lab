@@ -125,8 +125,12 @@
     font-family: Arial, Helvetica, sans-serif;
 
     
-
 }
+
+.Aim li{
+    padding-top: 10px
+}
+
 .centre{
     align-content: center;
     margin-left: 500px;
