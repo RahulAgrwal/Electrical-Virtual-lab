@@ -52,7 +52,7 @@
     position: absolute;
     margin: 0;
     padding-top: 60px;
-    padding-left: 500px;
+    padding-left: 300px;
     float: left;
     align-content: center;
     margin-top: 0px;
@@ -69,6 +69,7 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgb(0, 0, 0,0.15);
+    
 }
 .content-table thead tr{
     background-color: brown;
