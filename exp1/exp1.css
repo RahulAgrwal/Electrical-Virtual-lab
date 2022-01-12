@@ -1,35 +1,4 @@
 
-.header h1{
-    color: rgb(226, 0, 0);
-    position: relative;
-    font-size: 40px;
-    text-align: center;
-  
-}
-.header h2{
-    text-align: center;
-    color: rgba(161, 7, 7, 0.829);
-    font-family: Arial;
-    margin-top: 0px;
-    align-content: center;
-    float: auto;
-    
-}
-.header h3{
-    text-align: center;
-    color: rgba(161, 7, 7, 0.829);
-    font-family: Arial;
-    margin-top: -10px;
-    margin-bottom: 5px;
-    align-content: center;
-    float: auto;
-}
-
-.header img{
-    float: left;
-    
-    background: rgb(255, 255, 255);
-}
 .placeh{
     position: sticky;
     background-color: #160d0d;
@@ -59,7 +28,7 @@
 }
 
 .placeh2{
-    background-color: rgb(207, 18, 18);
+    background-color: #9a2827;
     font:13px/1.5 Verdana;
     width: 150px;
     float: left;
