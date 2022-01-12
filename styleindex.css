@@ -1,7 +1,10 @@
 
 .placeh3{
-    background-color: #160d0d;
+    
+    position: sticky;
+    background-color: #ffffff;
     margin-top: 0;
+    top:0;
    
 }
 .placeh3 ul{
@@ -10,6 +13,11 @@
     padding:100;
     overflow: hidden;
     align-items: center;
+    border-style: solid;
+    border-width: 1.5px;
+    border-bottom-width: 2.5px;
+    border-left: #9a2827;
+    border-right: #9a2827;
 }
 .placeh3 li{
     float: left;
@@ -17,10 +25,11 @@
 }
 .placeh3 li a{
     display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    color: #3a3a3a;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .table{

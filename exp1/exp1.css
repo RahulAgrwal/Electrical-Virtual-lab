@@ -1,7 +1,14 @@
-
+.Exp1view{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    position: sticky;
+    top: 58px;
+    background-color: white;
+    border: 10px white;
+}
 .placeh{
     position: sticky;
-    background-color: #160d0d;
+    background-color: #ffffff;
     margin-top: 0;
     top:0;
   
@@ -13,6 +20,11 @@
     padding:100;
     overflow: hidden;
     align-items: center;
+    border-style: solid;
+    border-width: 1.5px;
+    border-bottom-width: 2.5px;
+    border-left: #9a2827;
+    border-right: #9a2827;
 }
 .placeh li{
     float: left;
@@ -20,7 +32,7 @@
 }
 .placeh li a{
     display: block;
-  color: white;
+  color: #3a3a3a;
   text-align: center;
   padding: 14px 50px;
   text-decoration: none;
@@ -33,9 +45,9 @@
     width: 150px;
     float: left;
     position:sticky;
-    top: 47px;
+    top: 84px;
     margin-left: 0px;
-    border-radius: 6px;
+    border-radius: 5px;
     
 }
 .placeh2 ul{
@@ -51,8 +63,8 @@
 }
 
 .placeh2 ul li a{
-    width:80%;
-  border-left-color: #3c8dbc;
+    width:100%;
+  border-left-color: #ffffff;
   display:inline-block;
   color: rgb(0, 0, 0);
   text-align: left;
@@ -64,28 +76,24 @@
 }
 
 .placeh2 ul li :hover{
+    color: #9a2827;
     padding-right:3px;
-    transform: scale(1.1);
+    transform: scale(1);
     z-index: 100;
-    background: #25bcff;
+    background: #ffffff;
     background-position:center ;
     box-shadow: 0 5px 25px rgb(0,0,0,.1);
     border-radius: 5px;
-    border-left: 10px solid #3c8dbc ;
+    border-left: 10px solid #ffffff ;
 }
 .placeh2 ul li :hover a{
-    border-left: 10px solid #3c8dbc ;
-}
-.placeh2 ul li a:active{
-    border-left: 10px solid #3c8dbc ;
-    background: yellow;
+    border-left: 10px solid #ff0000 ;
 }
 
-.temp{
-    margin-top: 10px;
-    width: 80vw;
-    margin-left: 12vw;
-    
+.theoryppt{
+    width: 780px;
+    float: left;
+    margin-left: 150px;
 
 }
 .Aim{
@@ -104,3 +112,17 @@
     align-content: center;
     margin-left: 500px;
 }
+
+.download-btn{
+    background-color: #9a2827;
+    color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius:5px;
+}
+
+.download-btn:hover {
+    background-color: RoyalBlue;
+  }
+
