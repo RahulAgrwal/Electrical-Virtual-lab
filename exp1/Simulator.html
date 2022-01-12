@@ -53,15 +53,15 @@
     </div>
 
     <div style="margin-left: 26vw; margin-top: 70px; position: absolute;">
-       R<sub>1</sub><input type="number" oninput="mf1()" id="R1" value=30 style=" width: 60px; opacity:1;" min="1 " max="10000" > ohm
+       R<sub>1</sub><input type="number" oninput="mf1()" id="R1" value="8" style=" width: 60px; opacity:1;" min="1 " max="10000" > ohm
    </div>
 
    <div style="margin-left: 33vw; margin-top: 140px; position: absolute;">
-    R<sub>2</sub> <br><input type="number" id="R2" oninput="mf2()" value=6 style="width:60px;" min="1 " max="10000"><br>ohm
+    R<sub>2</sub> <br><input type="number" id="R2" oninput="mf2()" value="3" style="width:60px;" min="1 " max="10000"><br>ohm
 </div>
 
 <div style="margin-left: 51vw; margin-top: 165px; position: absolute;">
-  R<sub>3</sub> <input type="number" id="R3" oninput="mf3()" value=4 style=" width: 60px; opacity:1;" min="1 " max="10000">ohm
+  R<sub>3</sub> <input type="number" id="R3" oninput="mf3()" value="6" style=" width: 60px; opacity:1;" min="1 " max="10000">ohm
 </div>
 
 <div style="margin-left: 62vw; margin-top: 50px; position: absolute; background-color: bisque;">
@@ -119,7 +119,30 @@
 <p id="temp7" ></p>
 <p id="temp8" ></p>
 <p id="temp9" ></p>
-<button onclick="checkFun() ">Try it</button>
+<hr>
+parallel: <span id="parallel" ></span>
+<p id="c">R1</p>
+<p id="c1">R2</p>
+<p id="c2">R3</p>
+<p id="c3">V</p>
+<hr>
+<p id="ansvr1" ></p>
+    <p id="ansvr2" ></p>
+    <p id="ansvr3" ></p>
+<hr>
+ <!-- current  -->
+
+ <p id="anscr1"></p>
+ <p id="anscr2"></p>
+   <p id="anscr3"></p>
+  <hr>
+  <!--   power -->
+  <p id="anspr1"></p>
+  <p id="anspr2"></p>
+  <p id="anspr3"></p> 
+
+  <hr>
+<button onclick="checkFun() ">Verify it</button>
 
 </div>
 
