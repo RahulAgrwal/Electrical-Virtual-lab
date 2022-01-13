@@ -46,37 +46,39 @@ function mf1(){
 
 
 
+
+   function myFunction() {
+    const myWindow = window.open("Procedure.html", "", "width=600,height=300");
+    myWindow.opener.document.getElementById("demo").innerHTML = "HELLO!";
+  }
+
+
+
    function checkFun() {
 
     //row1
     let vr1 = document.getElementById("vr1").value;
-    document.getElementById("temp").innerHTML = vr1;
+    
 
     let ir1 = document.getElementById("ir1").value;
-    document.getElementById("temp2").innerHTML = ir1;
+   
 
     let pr1 = document.getElementById("pr1").value;
-    document.getElementById("temp3").innerHTML = pr1;
-
+   
     //row2
     let vr2 = document.getElementById("vr2").value;
-    document.getElementById("temp4").innerHTML = vr2;
-
+   
     let ir2 = document.getElementById("ir2").value;
-    document.getElementById("temp5").innerHTML = ir2;
-
+   
     let pr2 = document.getElementById("pr2").value;
-    document.getElementById("temp6").innerHTML = pr2;
-
+   
     //row3
     let vr3 = document.getElementById("vr3").value;
-    document.getElementById("temp7").innerHTML = vr3;
-
+    
     let ir3 = document.getElementById("ir3").value;
-    document.getElementById("temp8").innerHTML = ir3;
-
+  
     let pr3 = document.getElementById("pr3").value;
-    document.getElementById("temp9").innerHTML = pr3;
+  
 
 
 
@@ -116,7 +118,95 @@ function mf1(){
       document.getElementById("npr2").innerHTML = idlepr2.toFixed(2);
       document.getElementById("npr3").innerHTML = idlepr3.toFixed(2);
 
-
-
  }
 
+
+ function checkvolt()
+ {
+  let vr1 = document.getElementById("vr1").value;
+  let vr2 = document.getElementById("vr2").value;
+  let vr3 = document.getElementById("vr3").value;
+
+
+
+
+  let r1 = parseFloat( document.getElementById("R1").value);
+  let r2 =parseFloat( document.getElementById("R2").value);
+  let r3 = parseFloat(document.getElementById("R3").value);
+  let v =  parseFloat(document.getElementById("vin").value);
+
+  let rs=(r2*r3)/(r2+r3);
+
+  let idlevr2=(rs/(rs+r1))*v;//r2
+      let idlevr3=idlevr2;//r3
+      let idlevr1=v-idlevr2;//r1
+
+      if(Math.round(vr1)==Math.round(idlevr1) && Math.round(vr2)==Math.round(idlevr2) && Math.round(vr3)== Math.round(idlevr3))
+      {
+        document.getElementById("voltverify").innerHTML ="Voltage Verified.";
+      }
+      else
+      {
+
+        if(Math.round(vr1)!=Math.round(idlevr1) )
+        document.getElementById("voltverify").innerHTML ="Voltage across R1 is wrong! Try again.";
+        
+        if(Math.round(vr2)!=Math.round(idlevr2) )
+        document.getElementById("voltverify").innerHTML ="Voltage across R2 is wrong! Try again.";
+
+        if(Math.round(vr3)!=Math.round(idlevr3) )
+        document.getElementById("voltverify").innerHTML ="Voltage across R3 is wrong! Try again.";
+      }
+  
+ }
+
+
+
+ function checkcur()
+ {
+  let ir1 = document.getElementById("ir1").value;
+  let ir2 = document.getElementById("ir2").value;
+  let ir3 = document.getElementById("ir3").value;
+  
+
+
+
+  
+  let r1 = parseFloat( document.getElementById("R1").value);
+  let r2 =parseFloat( document.getElementById("R2").value);
+  let r3 = parseFloat(document.getElementById("R3").value);
+  let v =  parseFloat(document.getElementById("vin").value);
+
+  let rs=(r2*r3)/(r2+r3);
+
+  let idlevr2=(rs/(rs+r1))*v;//r2
+      let idlevr3=idlevr2;//r3
+      let idlevr1=v-idlevr2;//r1
+
+
+
+      let idlecr1=idlevr1/r1;//cr1
+      let idlecr2=idlevr2/r2;//cr2
+      let idlecr3=idlevr2/r3;//cr3
+
+
+
+
+
+      if(Math.round(ir1)==Math.round(idlecr1) && Math.round(ir2)==Math.round(idlecr2) && Math.round(ir3)== Math.round(idlecr3))
+      {
+        document.getElementById("curverify").innerHTML ="Current  Verified.";
+      }
+      else
+      {
+
+        if(Math.round(ir1)!=Math.round(idlecr1) )
+        document.getElementById("curverify").innerHTML ="Current through R1 is wrong! Try again.";
+        
+        if(Math.round(ir2)!=Math.round(idlecr2) )
+        document.getElementById("curverify").innerHTML ="Current through R2 is wrong! Try again.";
+
+        if(Math.round(ir3)!=Math.round(idlecr3) )
+        document.getElementById("curverify").innerHTML ="Current through R3 is wrong! Try again.";
+      }
+ }
