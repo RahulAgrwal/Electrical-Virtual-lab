@@ -9,14 +9,21 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-
+let name="";
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
+    while(true){
+        name=prompt("What is your Name?");
+        if(name!="") break;
+    }
+    
     info_box.classList.add("activeInfo"); //show info box
+    
 }
 
 // if exitQuiz button clicked
 exit_btn.onclick = ()=>{
+    
     info_box.classList.remove("activeInfo"); //hide info box
 }
 
@@ -150,6 +157,8 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
+    const nameofplayer=result_box.querySelector(".nameofplayer");
+    nameofplayer.innerHTML=name;
     if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';

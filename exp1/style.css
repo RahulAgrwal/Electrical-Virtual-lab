@@ -345,6 +345,10 @@ footer button.show{
     font-size: 20px;
     font-weight: 500;
 }
+.result_box .nameofplayer{
+    font-size: 20px;
+    font-weight: 500;
+}
 
 .result_box .score_text span{
     display: flex;
