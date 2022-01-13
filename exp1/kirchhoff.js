@@ -210,3 +210,56 @@ function mf1(){
         document.getElementById("curverify").innerHTML ="Current through R3 is wrong! Try again.";
       }
  }
+
+ function checkpow()
+ {
+  let pr1 = document.getElementById("pr1").value;
+  let pr2 = document.getElementById("pr2").value;
+  let pr3 = document.getElementById("pr3").value;
+  
+
+
+
+  
+  let r1 = parseFloat( document.getElementById("R1").value);
+  let r2 =parseFloat( document.getElementById("R2").value);
+  let r3 = parseFloat(document.getElementById("R3").value);
+  let v =  parseFloat(document.getElementById("vin").value);
+
+  let rs=(r2*r3)/(r2+r3);
+
+  let idlevr2=(rs/(rs+r1))*v;//r2
+      let idlevr3=idlevr2;//r3
+      let idlevr1=v-idlevr2;//r1
+
+
+
+      let idlecr1=idlevr1/r1;//cr1
+      let idlecr2=idlevr2/r2;//cr2
+      let idlecr3=idlevr2/r3;//cr3
+
+      let idlepr1=idlecr1*idlevr1;
+     let idlepr2=idlecr2*idlevr2;
+      let idlepr3=idlecr3*idlevr3;
+
+
+      if(Math.round(pr1)==Math.round(idlepr1) && Math.round(pr2)==Math.round(idlepr2) && Math.round(pr3)== Math.round(idlepr3))
+      {
+        document.getElementById("powverify").innerHTML ="Power Verified.";
+      }
+      else
+      {
+
+        if(Math.round(pr1)!=Math.round(idlepr1) )
+        document.getElementById("powverify").innerHTML ="Power in R1 is wrong! Try again.";
+        
+        if(Math.round(pr2)!=Math.round(idlepr2) )
+        document.getElementById("powverify").innerHTML ="Power in R2 is wrong! Try again.";
+
+        if(Math.round(pr3)!=Math.round(idlepr3) )
+        document.getElementById("powverify").innerHTML ="Power in R3 is wrong! Try again.";
+      }
+
+
+
+ }
