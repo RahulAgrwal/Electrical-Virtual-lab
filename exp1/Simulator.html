@@ -105,22 +105,27 @@
 
 
 
+    <div style="position: absolute; margin-left: 74vw; margin-top: 40px;">
+        <button onclick="myFunction()">Procedure</button>
+    </div>
+
+
     <div style="margin-left: 220px; margin-top: 150px; position: absolute;">
         <input type="number" value="30" id="vin" oninput="mf4()" style="width:60px;" min=1 max=300> <br>Volt
     </div>
 
     <div style="margin-left: 26vw; margin-top: 70px; position: absolute;">
-        R<sub>1</sub><input type="number" oninput="mf1()" id="R1" value=30 style=" width: 60px; opacity:1;" min="1 "
+        R<sub>1</sub><input type="number" oninput="mf1()" id="R1" value=8 style=" width: 60px; opacity:1;" min="1 "
             max="10000"> ohm
     </div>
 
     <div style="margin-left: 32vw; margin-top: 125px; position: absolute;">
-        R<sub>2</sub> <br><input type="number" id="R2" oninput="mf2()" value=6 style="width:60px;" min="1 "
+        R<sub>2</sub> <br><input type="number" id="R2" oninput="mf2()" value=3 style="width:60px;" min="1 "
             max="10000"><br>ohm
     </div>
 
     <div style="margin-left: 51vw; margin-top: 165px; position: absolute;">
-        R<sub>3</sub> <input type="number" id="R3" oninput="mf3()" value=4 style=" width: 60px; opacity:1;" min="1 "
+        R<sub>3</sub> <input type="number" id="R3" oninput="mf3()" value=6 style=" width: 60px; opacity:1;" min="1 "
             max="10000">ohm
     </div>
 
@@ -169,31 +174,26 @@
 
         </table>
 
-        <p id="tablecontent"></p>
-        <p id="temp"></p>
-        <p id="temp2"></p>
-        <p id="temp3"></p>
-        <p id="temp4"></p>
-        <p id="temp5"></p>
-        <p id="temp6"></p>
-        <p id="temp7"></p>
-        <p id="temp8"></p>
-        <p id="temp9"></p>
         
         
-        <button onclick="">Verify Voltage</button>
-        <button onclick="">Verify Current</button>
-        <button onclick="">Verify Power</button>
+        
+        <button onclick="checkvolt()">Verify Voltage</button>
+        <button onclick="checkcur()">Verify Current</button>
+        <button onclick="checkpow()">Verify Power</button>
        
         <hr>
+         <p id="voltverify"></p>
+         <p id="curverify"></p>
+         <p id="powverify"></p>
 
 
   <hr>
-   <button onclick="checkFun() ">Verify it</button>
+   <button onclick="checkFun() ">click here for answer</button><br>
+   <br>
 </div>
 
 
-<div style="position:absolute ;  margin-left: 21vw; margin-top: 44vw;">
+<div style="position:absolute ;  margin-left: 21vw; margin-top: 53vw;">
 
     <table id="tableDat" style=" border:solid;">
         <thead>
