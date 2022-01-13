@@ -99,6 +99,10 @@
 
     </div>
 
+    <div style="position: absolute; margin-left: 74vw; margin-top: 90px;">
+        <img src="theoryimage/eqn.png" height=200px width=300px>
+    </div>
+
 
 
     <div style="margin-left: 220px; margin-top: 150px; position: absolute;">
@@ -178,31 +182,49 @@
         
 
         <hr>
-parallel: <span id="parallel" ></span>
-<p id="c">R1</p>
-<p id="c1">R2</p>
-<p id="c2">R3</p>
-<p id="c3">V</p>
-<hr>
-<p id="ansvr1" ></p>
-    <p id="ansvr2" ></p>
-    <p id="ansvr3" ></p>
-<hr>
- <!-- current  -->
 
- <p id="anscr1"></p>
- <p id="anscr2"></p>
-   <p id="anscr3"></p>
-  <hr>
-  <!--   power -->
-  <p id="anspr1"></p>
-  <p id="anspr2"></p>
-  <p id="anspr3"></p> 
 
   <hr>
    <button onclick="checkFun() ">Verify it</button>
 </div>
 
+
+<div style="position:absolute ;  margin-left: 21vw; margin-top: 47vw;">
+
+    <table id="tableDat" style=" border:solid;">
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Voltage</th>
+                <th style="padding: 10px;">Current</th>
+                <th>Power</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>R1....  </td>
+                <td><span id="nvr1"></span></td>
+                <td><span id="nir1"></span></td>
+                <td><span id="npr1"></span></td>
+            </tr>
+
+            <tr>
+                <td>R2....   </td>
+                <td><span id="nvr2"></span></td>
+                <td><span id="nir2"></span></td>
+                <td><span id="npr2"></span></td>
+            </tr>
+
+            <tr>
+                <td>R3....  </td>
+                <td><span id="nvr3"></span></td>
+                <td><span id="nir3"></span></td>
+                <td><span id="npr3"></span></td>
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
 
 
     <script src="kirchhoff.js">
