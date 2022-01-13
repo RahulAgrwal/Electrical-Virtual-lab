@@ -126,3 +126,13 @@
     background-color: RoyalBlue;
   }
 
+  table,th{
+      text-align: center;
+  }
+  table,th,td{
+      border: solid black;
+      width: 600px;
+      text-align: center;
+      font-weight: bold;
+      color:black;
+  }
