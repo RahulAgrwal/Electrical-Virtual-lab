@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/bootstrap.css">
     <link rel="stylesheet" href="/style1.css">
     <link rel="stylesheet" href="/myStyle.css">
+    <link rel="stylesheet" href="/exp1/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link
         href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
         rel="stylesheet" />
@@ -70,7 +72,7 @@
         <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="/objectives.html">Learning Objectives</a></li>
-            <li><a href="/BroadGoal.html">Broad Goal</a></li>
+            <li><a href="/Broad Goal.html">Broad Goal</a></li>
             <li><a href="/AboutUs.html">AboutUs</a></li>
         </ul>
     </div>
@@ -78,7 +80,7 @@
     <div class="Exp1view">
         <a href="/index.html">Electrical Circuit Virtual Lab</a> >
         <a href="aim.html">To verify Kirchhoff’s Laws: Kirchhoff’s Current Law, Kirchhoff’s Voltage Law</a> >
-        <a href="postTest.html">Post Test</a>
+        <a href="postTest.html">PostTest</a>
     </div>
 
     <div class="placeh2">
@@ -94,216 +96,64 @@
         </ul>
     </div>
 
-
-
-
-    <div id="whole_body"
-        style=" background-color:#ffffff; margin-left :12vw; margin-right: 0px; margin-top:0px;height:auto; width:1150px;margin-bottom: 20px;">
-        <div style="font-size:18px; text-align:justify;padding-top: 5px">
-            <div style="font-size:25px; text-align:center;padding-top: 5px;margin-right: 5px;">
-                <b> Answer the following questions</b>
+    <div class="start_btn"><button>Start Quiz</button></div>
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+    <div class="quiz_box">
+        <header>
+            <div class="title">PostTest Quiz</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
             </div>
-
-
-
-            <p>
-
-            <form name="quiz">
-
-                <p>
-
-                    <b>Question 1.
-
-                        <br>Relation between currents according to KCL is:<br></b>
-                    <img style="float: center; margin-left: 5px;"
-                        src="https://www.sanfoundry.com/wp-content/uploads/2017/06/electric-circuits-questions-answers-kirchhoffs-laws-q2.png">
-                <blockquote>
-
-                    <input type="radio" name="pq1" value="i1"> i1=i2=i3=i4=i5<br>
-
-                    <input type="radio" name="pq1" value="i2"> i1+i4+i3=i5+i2<br>
-
-                    <input type="radio" name="pq1" value="i3">i1-i5=i2-i3-i4<br>
-
-                    <input type="radio" name="pq1" value="i4"> i1+i5=i2+i3+i4<br>
-
-
-                </blockquote>
-
-                <p><b>
-
-                        <hr>
-
-                        Question 2.
-
-                        <br>Find R-value from the below circuit?<br>
-                    </b>
-                    <img style="float: center; margin-left: 5px;"
-                        src="https://www.sanfoundry.com/wp-content/uploads/2017/06/electric-circuits-questions-answers-kirchhoffs-laws-q5.png">
-
-                <blockquote>
-
-                    <input type="radio" name="pq2" value="17.5">17.5 ?<br>
-
-                    <input type="radio" name="pq2" value="17.2">17.2 ?<br>
-
-                    <input type="radio" name="pq2" value="17.4">17.4 ?<br>
-
-                    <input type="radio" name="pq2" value="17.8">17.8 ?<br>
-
-                </blockquote>
-
-                <p><b>
-
-                        <hr>
-
-                        <b>Question 3.
-
-                            <br>Determine currents I1 , I2 and I3.<br></b>
-                        <img style="float: center; margin-left: 5px;"
-                            src="https://www.sanfoundry.com/wp-content/uploads/2017/06/electric-circuits-questions-answers-kirchhoffs-laws-q6.png">
-                        <blockquote>
-
-                            <input type="radio" name="pq3" value="-3.3">-3.3A, -8.5A, 2.4A<br>
-
-                            <input type="radio" name="pq3" value="3">3A, -8A, 2A<br>
-
-                            <input type="radio" name="pq3" value="3.3">3.3A, 8.5A, -2.4A<br>
-
-                            <input type="radio" name="pq3" value="3.2">3.2A, 8.6A, 2.3A<br>
-
-
-                        </blockquote>
-
-                        <p><b>
-
-                                <hr>
-
-
-
-
-                                <b>Question 4.
-
-                                    <br> The algebraic sum of voltages around any closed path in a network is equal to
-                                    ____________<br></b>
-
-                                <blockquote>
-
-                                    <input type="radio" name="pq4" value="infinity">Infinity<br>
-
-                                    <input type="radio" name="pq4" value="one">1<br>
-
-                                    <input type="radio" name="pq4" value="zero">0<br>
-
-                                    <input type="radio" name="pq4" value="Negative">Negative Polarity<br>
-
-
-                                </blockquote>
-
-                                <p><b>
-
-                                        <hr>
-
-
-
-
-
-
-                                        <p><b>
-
-                                                <input type="button" value="Grade Me" onClick="getScore(this.form);">
-
-                                                <input type="reset" value="Clear">
-                                                <p>
-
-                                                    Number of score out of 4 = <input type=text size 2 name="mark">
-
-                                                    Score in percentage = <input type=text size=2 name="percentage"><br>
-
-            </form>
-
-            <p>
-
-            <form method="post" name="Form" onsubmit="" action="">
-
-            </form>
-
-</body>
-
-<script>
-
-    var numQues = 4;
-
-    var numChoi = 4;
-
-    var answers = new Array(2);
-
-    answers[0] = "i4";
-
-    answers[1] = "17.5";
-
-    answers[2] = "3.3";
-
-    answers[3] = "zero";
-
-
-    function getScore(form) {
-
-        var score = 0;
-
-        var currElt;
-
-        var currSelection;
-
-        for (i = 0; i < numQues; i++) {
-
-            currElt = i * numChoi;
-
-            answered = false;
-
-            for (j = 0; j < numChoi; j++) {
-
-                currSelection = form.elements[currElt + j];
-
-                if (currSelection.checked) {
-
-                    answered = true;
-
-                    if (currSelection.value == answers[i]) {
-
-                        score++;
-
-                        break;
-
-                    }
-
-                }
-
-            }
-
-            if (answered === false) { alert("Do answer all the questions, Please"); return false; }
-
-        }
-
-        var scoreper = Math.round(score / numQues * 100);
-
-        form.percentage.value = scoreper + "%";
-
-        form.mark.value = score;
-
-    }
-
-</script>
-
-</html>
-
-
-
-
-
-</div>
-
-
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
+    </div>
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+
+<script src="/exp1/postest/questions.js"></script>
+<script src="/exp1/postest/script.js"></script>
 
 </body>
 
