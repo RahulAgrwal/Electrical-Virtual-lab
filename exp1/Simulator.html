@@ -152,14 +152,14 @@
             <tbody>
                 <tr>
                     <td>R1</td>
-                    <td><input type="number" id="vr1" placeholder="Enter Voltage"></td>
-                    <td><input type="number" id="ir1"placeholder="Enter Current" ></td>
-                    <td><input type="number" id="pr1" placeholder="Enter Power"></td>
+                    <td><input type="number" id="vr1" min="1" placeholder="Enter Voltage"></td>
+                    <td><input type="number" id="ir1" min="1" placeholder="Enter Current" ></td>
+                    <td><input type="number" id="pr1" min="1" placeholder="Enter Power"></td>
                 </tr>
 
                 <tr>
                     <td>R2</td>
-                    <td><input type="number" id="vr2" placeholder="Enter Voltage"></td>
+                    <td><input type="number" id="vr2"  placeholder="Enter Voltage"></td>
                     <td><input type="number" id="ir2" placeholder="Enter Current"></td>
                     <td><input type="number" id="pr2" placeholder="Enter Power"></td>
                 </tr>
@@ -176,19 +176,21 @@
 
         
         
-        
-        <button onclick="checkvolt()">Verify Voltage</button>
-        <button onclick="checkcur()">Verify Current</button>
-        <button onclick="checkpow()">Verify Power</button>
-       
+        <div style="margin-top: 20px; color: rgb(255, 255, 255); font-weight: bold; " >
+        <button onclick="checkvolt()"  style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Voltage</button>
+        <button onclick="checkcur()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Current</button>
+        <button onclick="checkpow()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Power</button>
+    </div>
         <hr>
+        
          <p id="voltverify"></p>
          <p id="curverify"></p>
          <p id="powverify"></p>
-
+       
 
   <hr>
-   <button onclick="checkFun() ">click here for answer</button><br>
+  <button onclick="checkFun()" style="color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click here to verify answer</button>
+   <!-- <button onclick="checkFun()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click here to verify answer</button><br> -->
    <br>
 </div>
 
@@ -206,21 +208,21 @@
         </thead>
         <tbody>
             <tr>
-                <td>R1....  </td>
+                <td>R1  </td>
                 <td><span id="nvr1"></span></td>
                 <td><span id="nir1"></span></td>
                 <td><span id="npr1"></span></td>
             </tr>
 
             <tr>
-                <td>R2....   </td>
+                <td>R2   </td>
                 <td><span id="nvr2"></span></td>
                 <td><span id="nir2"></span></td>
                 <td><span id="npr2"></span></td>
             </tr>
 
             <tr>
-                <td>R3....  </td>
+                <td>R3  </td>
                 <td><span id="nvr3"></span></td>
                 <td><span id="nir3"></span></td>
                 <td><span id="npr3"></span></td>
