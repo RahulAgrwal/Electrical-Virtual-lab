@@ -85,40 +85,38 @@ function mf1(){
     let r3 = parseFloat(document.getElementById("R3").value);
     let v =  parseFloat(document.getElementById("vin").value);
 
-    document.getElementById("c").innerHTML = r1;
-    document.getElementById("c1").innerHTML = r2;
-    document.getElementById("c2").innerHTML = r3;
-    document.getElementById("c3").innerHTML = v;
+   
     
     let rs=(r2*r3)/(r2+r3);
-      document.getElementById("parallel").innerHTML = rs.toFixed(2);
+      
       
       //voltage
       let idlevr2=(rs/(rs+r1))*v;//r2
       let idlevr3=idlevr2;//r3
       let idlevr1=v-idlevr2;//r1
       //print in HTML page
-      document.getElementById("ansvr2").innerHTML = idlevr2.toFixed(2);
-      document.getElementById("ansvr3").innerHTML = idlevr3.toFixed(2);
-      document.getElementById("ansvr1").innerHTML = idlevr1.toFixed(2);
+      document.getElementById("nvr2").innerHTML = idlevr2.toFixed(2);
+      document.getElementById("nvr3").innerHTML = idlevr3.toFixed(2);
+      document.getElementById("nvr1").innerHTML = idlevr1.toFixed(2);
 
      //cureent accross resistor
      let idlecr1=idlevr1/r1;//cr1
       let idlecr2=idlevr2/r2;//cr2
       let idlecr3=idlevr2/r3;//cr3
      // //print in HTML page
-     document.getElementById("anscr1").innerHTML = idlecr1.toFixed(2);
-      document.getElementById("anscr2").innerHTML = idlecr2.toFixed(2);
-     document.getElementById("anscr3").innerHTML = idlecr3.toFixed(2);
+     document.getElementById("nir1").innerHTML = idlecr1.toFixed(2);
+      document.getElementById("nir2").innerHTML = idlecr2.toFixed(2);
+     document.getElementById("nir3").innerHTML = idlecr3.toFixed(2);
 
      let idlepr1=idlecr1*idlevr1;
      let idlepr2=idlecr2*idlevr2;
       let idlepr3=idlecr3*idlevr3;
      // //print in HTML page
-      document.getElementById("anspr1").innerHTML = idlepr1.toFixed(2);
-      document.getElementById("anspr2").innerHTML = idlepr2.toFixed(2);
-      document.getElementById("anspr3").innerHTML = idlepr3.toFixed(2);
+      document.getElementById("npr1").innerHTML = idlepr1.toFixed(2);
+      document.getElementById("npr2").innerHTML = idlepr2.toFixed(2);
+      document.getElementById("npr3").innerHTML = idlepr3.toFixed(2);
 
 
 
  }
+
