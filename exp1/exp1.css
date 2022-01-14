@@ -89,6 +89,19 @@
 .placeh2 ul li :hover a{
     border-left: 10px solid #ff0000 ;
 }
+.placeh2 ul li.active{
+    color: #9a2827;
+    padding-right:3px;
+    transform: scale(1);
+    z-index: 100;
+    background: #ffffff;
+    background-position:right ;
+    box-shadow: 0 30px 25px rgb(0,0,0,.1);
+    border-radius: 8px;
+    border: 1px solid #9a2827;
+    background-size: 70px 40px;
+    background-repeat: no-repeat;
+}
 
 .theoryppt{
     width: 780px;
