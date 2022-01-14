@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/bootstrap.css">
     <link rel="stylesheet" href="/style1.css">
     <link rel="stylesheet" href="/myStyle.css">
+    <link rel="stylesheet" href="/exp1/style.css">
     <link
         href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
         rel="stylesheet" />
@@ -38,7 +39,7 @@
                     <div class="clg-cir"><b><a href="/affiliation-status.aspx" style="color: maroon; font-size:15px;">*
                                 Permanently Affiliated to the Savitribai Phule Pune University. Approved by AICTE New
                                 Delhi and DTE Maharashtra.</a></b></div>
-                                <div class="clg-name">Electrical Circuit Virtual Lab</div>
+                    <div class="clg-name">Electrical Circuit Virtual Lab</div>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 hidden-xs hidden-sm">
                     <div class=""
@@ -137,6 +138,19 @@
 
 
     </div>
+    <style>
+        .correct {
+            color: #155724;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+
+        .incorrect {
+            color: #721c24;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
 
     <div style="position:absolute ;  margin-left: 21vw; margin-top: 23vw;">
 
@@ -153,13 +167,13 @@
                 <tr>
                     <td>R1</td>
                     <td><input type="number" id="vr1" min="1" placeholder="Enter Voltage"></td>
-                    <td><input type="number" id="ir1" min="1" placeholder="Enter Current" ></td>
+                    <td><input type="number" id="ir1" min="1" placeholder="Enter Current"></td>
                     <td><input type="number" id="pr1" min="1" placeholder="Enter Power"></td>
                 </tr>
 
                 <tr>
                     <td>R2</td>
-                    <td><input type="number" id="vr2"  placeholder="Enter Voltage"></td>
+                    <td><input type="number" id="vr2" placeholder="Enter Voltage"></td>
                     <td><input type="number" id="ir2" placeholder="Enter Current"></td>
                     <td><input type="number" id="pr2" placeholder="Enter Power"></td>
                 </tr>
@@ -174,62 +188,67 @@
 
         </table>
 
-        
-        
-        <div style="margin-top: 20px; color: rgb(255, 255, 255); font-weight: bold; " >
-        <button onclick="checkvolt()"  style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Voltage</button>
-        <button onclick="checkcur()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Current</button>
-        <button onclick="checkpow()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Power</button>
-    </div>
+
+
+        <div style="margin-top: 20px; color: rgb(255, 255, 255); font-weight: bold; ">
+            <button onclick="checkvolt()"
+                style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Voltage</button>
+            <button onclick="checkcur()"
+                style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Current</button>
+            <button onclick="checkpow()"
+                style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Power</button>
+        </div>
         <hr>
-        
-         <p id="voltverify"></p>
-         <p id="curverify"></p>
-         <p id="powverify"></p>
-       
 
-  <hr>
-  <button onclick="checkFun()" style="color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click here to verify answer</button>
-   <!-- <button onclick="checkFun()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click here to verify answer</button><br> -->
-   <br>
-</div>
+        <p id="voltverify"></p>
+        <p id="curverify"></p>
+        <p id="powverify"></p>
 
 
-<div style="position:absolute ;  margin-left: 21vw; margin-top: 53vw;">
+        <hr>
+        <button onclick="checkFun()"
+            style="color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click
+            here to verify answer</button>
+        <!-- <button onclick="checkFun()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click here to verify answer</button><br> -->
+        <br>
+    </div>
 
-    <table id="tableDat" style=" border:solid;">
-        <thead>
-            <tr>
-                <th> </th>
-                <th>Voltage</th>
-                <th style="padding: 10px;">Current</th>
-                <th>Power</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>R1  </td>
-                <td><span id="nvr1"></span></td>
-                <td><span id="nir1"></span></td>
-                <td><span id="npr1"></span></td>
-            </tr>
 
-            <tr>
-                <td>R2   </td>
-                <td><span id="nvr2"></span></td>
-                <td><span id="nir2"></span></td>
-                <td><span id="npr2"></span></td>
-            </tr>
+    <div style="position:absolute ;  margin-left: 21vw; margin-top: 53vw;">
 
-            <tr>
-                <td>R3  </td>
-                <td><span id="nvr3"></span></td>
-                <td><span id="nir3"></span></td>
-                <td><span id="npr3"></span></td>
-            </tr>
-        </tbody>
+        <table id="tableDat" style=" border:solid;">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th>Voltage</th>
+                    <th style="padding: 10px;">Current</th>
+                    <th>Power</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>R1 </td>
+                    <td><span id="nvr1"></span></td>
+                    <td><span id="nir1"></span></td>
+                    <td><span id="npr1"></span></td>
+                </tr>
 
-    </table>
+                <tr>
+                    <td>R2 </td>
+                    <td><span id="nvr2"></span></td>
+                    <td><span id="nir2"></span></td>
+                    <td><span id="npr2"></span></td>
+                </tr>
+
+                <tr>
+                    <td>R3 </td>
+                    <td><span id="nvr3"></span></td>
+                    <td><span id="nir3"></span></td>
+                    <td><span id="npr3"></span></td>
+                </tr>
+            </tbody>
+
+        </table>
     </div>
 
 

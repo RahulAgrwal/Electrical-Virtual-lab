@@ -118,6 +118,7 @@ function showQuetions(index){
 let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
+
 //if user clicked on option
 function optionSelected(answer){
     clearInterval(counter); //clear counter
