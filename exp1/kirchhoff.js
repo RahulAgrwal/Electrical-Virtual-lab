@@ -53,7 +53,6 @@ function myFunction() {
 }
 
 
-
 var r0c0 = 0, r0c1 = 0, r0c2 = 0, r1c0 = 0, r1c1 = 0, r1c2 = 0, r2c0 = 0, r2c1 = 0, r2c2 = 0;
 
 function checkFun() {
