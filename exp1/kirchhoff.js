@@ -157,7 +157,7 @@ function checkvolt() {
 
     if (Math.round(vr3) != Math.round(idlevr3)){
       document.getElementById("voltverify").innerHTML = "Voltage across R3 is wrong! Try again.";
-      document.getElementById("vr2").classList.add("incorrect");
+      document.getElementById("vr3").classList.add("incorrect");
     }
   }
 
