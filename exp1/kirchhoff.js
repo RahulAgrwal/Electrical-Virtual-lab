@@ -53,89 +53,54 @@ function myFunction() {
 }
 
 
-var r0c0 = 0, r0c1 = 0, r0c2 = 0, r1c0 = 0, r1c1 = 0, r1c2 = 0, r2c0 = 0, r2c1 = 0, r2c2 = 0;
-
-function checkFun() {
 
 
-  //row1
-  let vr1 = document.getElementById("vr1").value;
-  let ir1 = document.getElementById("ir1").value;
-  let pr1 = document.getElementById("pr1").value;
+function solve(){
+  var idlevr1 = 0, idlevr2 = 0, idlevr3 = 0, idlecr1 = 0, idlecr2 = 0, idlecr3 = 0, idlepr1 = 0, idlepr2 = 0, idlepr3 = 0;
 
-  //row2
-  let vr2 = document.getElementById("vr2").value;
-  let ir2 = document.getElementById("ir2").value;
-  let pr2 = document.getElementById("pr2").value;
+let vr1 = document.getElementById("vr1").value;
+let ir1 = document.getElementById("ir1").value;
+let pr1 = document.getElementById("pr1").value;
 
-  //row3
-  let vr3 = document.getElementById("vr3").value;
-  let ir3 = document.getElementById("ir3").value;
-  let pr3 = document.getElementById("pr3").value;
+//row2
+let vr2 = document.getElementById("vr2").value;
+let ir2 = document.getElementById("ir2").value;
+let pr2 = document.getElementById("pr2").value;
 
-  let r1 = parseFloat(document.getElementById("R1").value);
-  let r2 = parseFloat(document.getElementById("R2").value);
-  let r3 = parseFloat(document.getElementById("R3").value);
-  let v = parseFloat(document.getElementById("vin").value);
+//row3
+let vr3 = document.getElementById("vr3").value;
+let ir3 = document.getElementById("ir3").value;
+let pr3 = document.getElementById("pr3").value;
 
+let r1 = parseFloat(document.getElementById("R1").value);
+let r2 = parseFloat(document.getElementById("R2").value);
+let r3 = parseFloat(document.getElementById("R3").value);
+let v = parseFloat(document.getElementById("vin").value);
   let rs = (r2 * r3) / (r2 + r3);
-
-
-  //voltage
-  let idlevr2 = (rs / (rs + r1)) * v;//r2
-  let idlevr3 = idlevr2;//r3
-  let idlevr1 = v - idlevr2;//r1
-
-  r0c0 = v - idlevr2;
-  r1c0 = (rs / (rs + r1)) * v;
-  r2c0 = idlevr2;
-
-
-  //print in HTML page
-  document.getElementById("nvr2").innerHTML = idlevr2.toFixed(6);
-  document.getElementById("nvr3").innerHTML = idlevr3.toFixed(6);
-  document.getElementById("nvr1").innerHTML = idlevr1.toFixed(6);
+   idlevr2 = (rs / (rs + r1)) * v;//r2
+   idlevr3 = idlevr2;//r3
+   idlevr1 = v - idlevr2;//r
 
   //cureent accross resistor
-  let idlecr1 = idlevr1 / r1;//cr1
-  let idlecr2 = idlevr2 / r2;//cr2
-  let idlecr3 = idlevr2 / r3;//cr3
-  r0c1 = idlecr1;
-  r1c1 = idlecr2;
-  r2c1 = idlecr3;
+   idlecr1 = idlevr1 / r1;//cr1
+   idlecr2 = idlevr2 / r2;//cr2
+   idlecr3 = idlevr2 / r3;//cr3
   // //print in HTML page
-  document.getElementById("nir1").innerHTML = idlecr1.toFixed(6);
-  document.getElementById("nir2").innerHTML = idlecr2.toFixed(6);
-  document.getElementById("nir3").innerHTML = idlecr3.toFixed(6);
+   idlepr1 = idlecr1 * idlevr1;
+   idlepr2 = idlecr2 * idlevr2;
+   idlepr3 = idlecr3 * idlevr3;
+   sessionStorage.setItem("nvr1",idlevr1);
+   sessionStorage.setItem("nvr2",idlevr2);
+   sessionStorage.setItem("nvr3",idlevr3);
 
-  let idlepr1 = idlecr1 * idlevr1;
-  let idlepr2 = idlecr2 * idlevr2;
-  let idlepr3 = idlecr3 * idlevr3;
+   sessionStorage.setItem("nir1",idlecr1);
+   sessionStorage.setItem("nir2",idlecr2);
+   sessionStorage.setItem("nir3",idlecr3);
 
-  // //print in HTML page
-  document.getElementById("npr1").innerHTML = idlepr1.toFixed(6);
-  document.getElementById("npr2").innerHTML = idlepr2.toFixed(6);
-  document.getElementById("npr3").innerHTML = idlepr3.toFixed(6);
+   sessionStorage.setItem("npr1",idlepr1);
+   sessionStorage.setItem("npr2",idlepr2);
+   sessionStorage.setItem("npr3",idlepr3);
 
-
-  r0c2 = idlepr1;
-  r1c2 = idlepr2;
-  r2c2 = idlepr3;
-
-}
-
-function editsimulatorans() {
-  document.getElementById("r0c0").innerHTML = r0c0.toFixed(6);
-  document.getElementById("r1c0").innerHTML = r1c0.toFixed(6);
-  document.getElementById("r2c0").innerHTML = r2c0.toFixed(6);
-
-  document.getElementById("r0c1").innerHTML = r0c1.toFixed(6);
-  document.getElementById("r1c1").innerHTML = r1c1.toFixed(6);
-  document.getElementById("r2c1").innerHTML = r2c1.toFixed(6);
-
-  document.getElementById("r0c2").innerHTML = r0c2.toFixed(6);
-  document.getElementById("r1c2").innerHTML = r1c2.toFixed(6);
-  document.getElementById("r2c2").innerHTML = r2c2.toFixed(6);
 }
 
 

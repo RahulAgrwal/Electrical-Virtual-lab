@@ -96,7 +96,7 @@
     </div>
     <div>
 
-        <img src="theoryimage/circuit.png" style="position:absolute; margin-left: -60px; margin-top: -99px;">
+        <img src="theoryimage/circuit.png" style="position:absolute; margin-left: -120px; margin-top: -99px;">
 
     </div>
 
@@ -112,21 +112,21 @@
     </div>
 
 
-    <div style="margin-left: 295px; margin-top: 150px; position: absolute;">
+    <div style="margin-left: 335px; margin-top: 150px; position: absolute;">
         <input type="number" value="30" id="vin" oninput="mf4()" style="width:60px;" min=1 max=300> <br><b>Volt</b>
     </div>
 
-    <div style="margin-left: 34.5vw; margin-top: 5px; position: absolute;">
+    <div style="margin-left: 36vw; margin-top: 5px; position: absolute;">
         <b>R</b><sub>1</sub><input type="number" oninput="mf1()" id="R1" value=8 style=" width: 60px; opacity:1;"
             min="1 " max="10000"> ohm
     </div>
 
-    <div style="margin-left: 43vw; margin-top: 140px; position: absolute;">
+    <div style="margin-left: 45vw; margin-top: 140px; position: absolute;">
         <b>R</b><sub>2</sub> <br><input type="number" id="R2" oninput="mf2()" value=3 style="width:60px;" min="1 "
             max="10000"><br>ohm
     </div>
 
-    <div style="margin-left: 56vw; margin-top: 90px; position: absolute;">
+    <div style="margin-left: 55vw; margin-top: 90px; position: absolute;">
         <b>R</b> <sub>3</sub><br> <input type="number" id="R3" oninput="mf3()" value=6 style=" width: 60px; opacity:1;"
             min="1 " max="10000"><br>ohm
     </div>
@@ -207,7 +207,7 @@
 
 
         <hr>
-        <button  onclick="checkFun(), myFunctionAnswer()"
+        <button  onclick="solve(),myFunctionAnswer()"
             style="color: #ffffff; font-weight: bold; background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;"
             >Click
             here to see answer</button>
@@ -215,44 +215,6 @@
         <br>
     </div>
 
-
-    <div style="position:absolute ;  margin-left: 21vw; margin-top: 53vw;">
-
-        <table id="tableDat" style=" border:solid;">
-            <thead>
-                <tr>
-                    <th> </th>
-                    <th>Voltage (in volt)</th>
-                    <th style="padding: 10px;">Current(in amp)</th>
-                    <th>Power(in watt)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>R1 </td>
-                    <td><span id="nvr1"></span></td>
-                    <td><span id="nir1"></span></td>
-                    <td><span id="npr1"></span></td>
-                </tr>
-
-                <tr>
-                    <td>R2 </td>
-                    <td><span id="nvr2"></span></td>
-                    <td><span id="nir2"></span></td>
-                    <td><span id="npr2"></span></td>
-                </tr>
-
-                <tr>
-                    <td>R3 </td>
-                    <td><span id="nvr3"></span></td>
-                    <td><span id="nir3"></span></td>
-                    <td><span id="npr3"></span></td>
-                </tr>
-            </tbody>
-
-        </table>
-       
-    </div>
 
 
     <script src="kirchhoff.js">
