@@ -1,47 +1,70 @@
 // creating an array and passing the number, questions, options, and answers
 let questions = [
-    {
+  {
     numb: 1,
-    question: "A junction where two (or) more than two network elements meet is known as ______________",
-    answer: "Node",
+    question: "Consider the following statements:<p >i. Power factor will be unity.<br>ii. Current in circuit will be maximum.<br>iii. Current in circuit will be minimum.<br>Which of these statements are correct with respect to resonance in R-L-C parallel circuit?</p>",
+    answer: "i and iii only",
     options: [
-      "Node",
-      "Branch",
-      "Loop",
-      "Mesh"
-    ]
+      "i, ii and iii",
+      "i and ii only",
+      "ii and iii only",
+      "i and iii only"
+    ],
+    reason:"i. Power Factor will be unity.<br>iii. Current in circuit will be minimum."
   },
-    {
+  {
     numb: 2,
-    question: "The basic laws for analyzing an electric circuit are :-",
-    answer: "Kirchhoff’s laws",
+    question: "AC measuring instrument measures",
+    answer: "rms value",
     options: [
-      "Einstein’s theory",
-      "Newtons laws",
-      "Kirchhoff’s laws",
-      "Faradays laws"
+      "rms value",
+      "average value",
+      "peak value",
+      "none"
     ]
   },
-    {
+  {
     numb: 3,
-    question: "In a circuit, the current is directly proportional to __________.",
-    answer: "Voltage",
+    question: "Alternating voltage",
+    answer: "varies sinusoidally",
     options: [
-      "Temperature",
-      "Voltage",
-      "Resistance",
-      "Resistivity"
+      "is independent of time	",
+    "varies sinusoidally",
+    "varies inversely with time	",
+    "varies directly with time"
     ]
   },
-    {
+  {
     numb: 4,
-    question: "All _____________ are loops but _______________ are not meshes",
-    answer: "Meshes,Loops",
+    question: "The Q-factor of the resistance coil is _________________",
+    answer: "Infinitely High",
     options: [
-      "Loops, Meshes",
-      "Meshes,Loops",
-      "Branches, Loops",
-      "Nodes,Branches"
+      "Zero",
+      "Low",
+      "High",
+      "Infinitely High"
+    ]
+  },
+  {
+    numb: 5,
+    question: "What will happen if parallel RL connected to a DC power source?",
+    answer: "Maximum current will flow through circuit.",
+    options: [
+      "No current will flow through circuit",
+      "Minimum current will flow through circuit.",
+      "Resistor will damage.",
+      "Maximum current will flow through circuit."
+    ]
+  },
+  {
+    numb: 6,
+    question: "Without tuning circuit no _______________ would be possible",
+    answer: "Communication",
+    options: [
+      "Oscillation",
+      "Filtering",
+      "Communication",
+      "Amplification"
     ]
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question

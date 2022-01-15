@@ -149,6 +149,10 @@ function optionSelected(answer){
     for(i=0; i < allOptions; i++){
         option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
     }
+
+    const ans_text = document.querySelector(".ans_text");
+    let ans_tag = '<span>' + "Answer : <br>" +questions[que_count].reason +'</span>';
+    ans_text.innerHTML = ans_tag;
     next_btn.classList.add("show"); //show the next button if user selected any option
 }
 
