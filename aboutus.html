@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="bootstrap.css">
 	<link rel="stylesheet" href="style1.css">
 	<link rel="stylesheet" href="myStyle.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
 	<link
 		href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
 		rel="stylesheet" />
@@ -67,41 +70,92 @@
 		</div>
 	</div>
 	<div class="placeh3">
-        <ul>
-          <li ><a  href="index.html">Home</a></li>
-          <li ><a  href="objectives.html">Learning Objectives</a></li>
-          <li><a href="broadgoal.html">Broad Goal</a></li>
-          <li><a href="aboutus.html">AboutUs</a></li>
-        </ul>
-    </div>
-	<div class="table">
-		<table class="content-table-objectives">
-			<div style="font-size: 22px;
-		line-height: normal;
-		margin-top: 6px;
-		font-weight: 600;
-		text-transform: uppercase;
-		text-align: left;padding-left: 180px;padding-bottom: 10px;color: #923032;">Electrical Circuit Virtual lab</div>
-			<thead>
-				<tr>
-					<th style="text-align: center;">Broad Goal</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1. The primary goal is to prepare students for successful professional career in Electrical Circuit field</td>
-				</tr>
-				<tr>
-					<td>2. To get good knowledge of electrical circuit</td>
-				</tr>
-				<tr>
-					<td>3. Students able to analyze and select a suitable motor for different applications.</td>
-				</tr>
-				<tr>
-					<td>4. Students enabled to implement DC & AC circuits.</td>
-				</tr>
-				
-			</tbody>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="objectives.html">Learning Objectives</a></li>
+			<li><a href="broadgoal.html">Broad Goal</a></li>
+			<li><a href="aboutus.html">AboutUs</a></li>
+		</ul>
 	</div>
+	<div class="container">
+		<div id="rahul">
+			<img src="/imageaboutus.png">
+			<p style="font-family: 'The Nautigal', cursive;">Rahul Agarwal</p>
+		</div>
+
+		<div id="kumar">
+			<img src="/imageaboutus.png">
+			<p >Kumar Jawale</p>
+		</div>
+
+		<div id="shantanu">
+			<img src="/imageaboutus.png">
+			<p >Shantanu</p>
+		</div>
+	</div>
+	<style type="text/css">
+		.container {
+			width: fit-content;
+			height: 500px;
+			background-color: green;
+			padding-top: 20px;
+			padding-left: 15px;
+			padding-right: 15px;
+			
+		}
+
+		#rahul {
+			text-align: center;
+			float: left;
+			width: 300px;
+			height: 450px;
+			background-color: white;
+			border: solid black;
+			border-radius: 10px;
+			
+		}
+		.container div{
+			transition-duration: 1.8s;
+		}
+		.container div:hover{
+			transform: scale(1.1);
+		}
+		.container div img{
+			margin-top:10px;
+			margin-bottom:10px;
+			width: 180px; 
+			height: 170px; 
+			border-radius: 50%;
+			border: 5px aqua solid;
+		}
+
+		.container div p{
+			text-align: center;
+			
+		}
+
+		#kumar {
+			text-align: center;
+			float: left;
+			width: 300px;
+			height: 450px;
+			background-color: white;
+			border: solid black;
+			margin-left: 20px;
+			margin-right: 20px;
+			border-radius: 10px;
+		}
+
+		#shantanu {
+			text-align: center;
+			float: right;
+			width: 300px;
+			height: 450px;
+			background-color: white;
+			border: solid black;
+			border-radius: 10px;
+		}
+	</style>
 </body>
+
 </html>
