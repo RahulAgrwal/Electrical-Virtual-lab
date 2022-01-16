@@ -21,7 +21,8 @@ let questions = [
       "average value",
       "peak value",
       "none"
-    ]
+    ],
+    reason:"AC measuring instruments measure the power used by an electrical device. RMS value is also defined as the square root of power. Hence, AC measuring instruments are used to measure the rms values of current(or voltage). "
   },
   {
     numb: 3,
@@ -32,7 +33,8 @@ let questions = [
     "varies sinusoidally",
     "varies inversely with time	",
     "varies directly with time"
-    ]
+    ],
+    reason:"Alternating current involves the current flow in the form of a sinusoidal wave. It’s direction changes with time as the sine wave."
   },
   {
     numb: 4,
@@ -43,7 +45,8 @@ let questions = [
       "Low",
       "High",
       "Infinitely High"
-    ]
+    ],
+    reason:"The Q factor of any Coil based resonant circuit depends upon the quality of the coil; If the coil is of good quality, its resistance will be less ; Poor quality coils have more resistance"
   },
   {
     numb: 5,
@@ -54,7 +57,8 @@ let questions = [
       "Minimum current will flow through circuit.",
       "Resistor will damage.",
       "Maximum current will flow through circuit."
-    ]
+    ],
+    reason:"The current will pass through the resistor branch and the capacitor branch but no current will be there in inductor branch because capacitor acts as a short circuit when initially uncharged and open circuit when fully charged."
   },
   {
     numb: 6,
@@ -65,7 +69,8 @@ let questions = [
       "Filtering",
       "Communication",
       "Amplification"
-    ]
+    ],
+    reason:"When we connect a charged capacitor is connected across an inductor, charges flow through inductor. This sets up a magnetic field around it and thus minimizing voltage across capacitor. In this all charge will dissipate and voltage across capacitor is zero."
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question
   // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
