@@ -169,7 +169,7 @@ function checkvolt() {
   document.getElementById("impedence").classList.add("correct");
   
   if (Math.round(reactance) == Math.round(idlereact) && Math.round(impedence) == Math.round(idleimp) ) {
-    document.getElementById("voltverify").innerHTML = "<b>Voltage Verified.</b>";
+    document.getElementById("voltverify").innerHTML = "<b>Reactance and Impedance Verified.</b>";
     document.getElementById("reactance").classList.add("correct");
     document.getElementById("impedence").classList.add("correct");
 
