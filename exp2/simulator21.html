@@ -179,14 +179,14 @@
   </div>
 
   <div style="margin-left: 60vw; margin-top: 350px; position: absolute;">
-    <b>L</b> <input type="number" id="R3" oninput="mf3()" value=6 style=" width: 60px; opacity:1;" min=1
+    <b>L</b> <input type="number" id="R3" oninput="mf3()" value=6 style=" width: 60px; opacity:1;" 
       max=1000><br>Henry
   </div>
 
   <div style=" margin-left: 68vw; margin-top: 90px; position: absolute; background-color: bisque; font-size: larger;">
-    E: <span id="demo4"></span><br>
-    R:<span id="demo2"></span> <br>
-    L:<span id="demo3"></span> <br>
+    E: <span id="demo4">30</span><br>
+    R:<span id="demo2">3</span> <br>
+    L:<span id="demo3">6</span> <br>
 
 
 
@@ -263,7 +263,7 @@
       Power</button>
   </div>
   <hr>
-
+<div style="position: relative; margin-left: 17vw;">
   <p id="voltverify"></p>
   <p id="curverify"></p>
   <p id="powverify"></p>
@@ -287,7 +287,8 @@
   <hr>
 
   <hr>
-  <button onclick="solve()"
+  </div>
+  <button onclick="solve(),myFunctionAnswer()"
     style=" margin-left: 16vw; color: #ffffff; font-weight: bold; background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040; margin-bottom: 20px;">Click
     here to see answer</button>
   <!-- <button onclick="checkFun()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click here to verify answer</button><br> -->
