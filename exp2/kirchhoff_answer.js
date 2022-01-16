@@ -8,6 +8,11 @@ function show(){
   document.getElementById("nir2").innerHTML = parseFloat(sessionStorage.getItem("nir2")).toFixed(6);
   document.getElementById("nir3").innerHTML = parseFloat(sessionStorage.getItem("nir3")).toFixed(6);
 
+
+  document.getElementById("res1").innerHTML = parseFloat(sessionStorage.getItem("res1")).toFixed(6);
+  document.getElementById("res2").innerHTML = parseFloat(sessionStorage.getItem("res2")).toFixed(6);
+  document.getElementById("res3").innerHTML = parseFloat(sessionStorage.getItem("res3")).toFixed(6);
+
   // //print in HTML page
   document.getElementById("npr1").innerHTML = parseFloat(sessionStorage.getItem("npr1")).toFixed(6);
   document.getElementById("npr2").innerHTML = parseFloat(sessionStorage.getItem("npr2")).toFixed(6);
