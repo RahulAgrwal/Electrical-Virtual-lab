@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/bootstrap.css">
     <link rel="stylesheet" href="/style1.css">
     <link rel="stylesheet" href="/myStyle.css">
+    <link rel="stylesheet" href="/exp2/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link
         href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
         rel="stylesheet" />
@@ -78,7 +80,7 @@
     <div class="Exp1view">
         <a href="/index.html">Electrical Circuit Virtual Lab</a> >
         <a href="aim.html">To study and verify Parallel RC, RL & LC Circuit</a> >
-        <a href="References.html">References</a>
+        <a href="postTest.html">PostTest</a>
     </div>
 
     <div class="placeh2">
@@ -89,43 +91,73 @@
             <li><a href="pretest.html">Pre Test</a></li>
             <li><a href="Procedure.html">Procedure</a></li>
             <li><a href="Simulator.html">Simulator</a> </li>
-            <li><a href="postTest.html">Post Test</a></li>
-            <li class="active"><a href="References.html">References</a></li>
+            <li class="active"><a href="postTest.html">Post Test</a></li>
+            <li><a href="References.html">References</a></li>
         </ul>
     </div>
-    <div>
-        <p class="temp">
 
-        <div class="Aim">
-            <h2>Reference:</h2>
-
-            <h3>Books:</h3>
-            <ol>
-                <li>Resnick, Robert et.al. Physics. New York: Wiley, 2002.</li>
-                <li>Electric circuits- David A.Bell, Oxford University press, Seventh Edition 2009.</li>
-                <li>IIT-JEE Physics- S.P.Arya, MTG Books, 2007.</li>
-                <li>Serway, Raymond et.al. College Physics. Australia: Thomson Brooks/Cole, 2006.</li>
-                <li>University Physics, Revised Ed, Harris Benson, Wiley-India, 2008</li>
-            </ol>
-
-            <h3>Webliography:</h3>
-            <ol>
-                <li>Wikipedia</li>
-                <li> Matrix operations. <a href="http://en.wikipedia.org/wiki/LU_decomposition">[
-                        http://en.wikipedia.org/wiki/LU_decomposition ]</a> </li>
-                <li>Graph theory.<a href="http://en.wikipedia.org/wiki/Graph_theory">[
-                        http://en.wikipedia.org/wiki/Graph_theory ]</li>
-            </ol>
-
-
+    <div class="start_btn"><button>Start Posttest</button></div>
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>60 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
         </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+    <div class="quiz_box">
+        <header>
+            <div class="title">PostTest Quiz</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+            <div class="ans_text">
+                <!-- Here I've inserted answer from JavaScript -->
+            </div>
+        </section>
 
-
-        </p>
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
+    </div>
+    <div class="result_box">
+        <div class="nameofplayer"></div>
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
     </div>
 
 
-
+<script src="./postest/questions.js"></script>
+<script src="./postest/script.js"></script>
 
 </body>
 

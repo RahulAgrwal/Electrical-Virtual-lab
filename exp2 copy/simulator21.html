@@ -180,17 +180,139 @@
       </ul>
     </div>
 
-    <div style="position: absolute; margin-left: 40vw; margin-top: 40px;">
+    <div style="position: absolute; margin-left: 16vw; margin-top: 0px;">
         <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;">RL Parallel Circuit</button>
         <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;">RC Parallel Circuit</button>
         <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;">RLC Parallel Circuit</button>
     </div>
-    <a href="simulator21.html">Click</a>
-   
+<!-- img -->
+<div style="position:absolute; margin-left: 16vw;">
+
+  <img src="theoryimage/RLimg.png" height=600px width=700px style="margin-top: 20px;  padding-top: 60px;" >
+
+</div>
+
+
+
+<!-- procedure -->
     <div style="position: absolute; margin-left: 74vw; margin-top: 40px;">
         <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;"
             onclick="myFunction()">Procedure</button>
     </div>
+    <!-- input -->
+    <div style="margin-left: 330px; margin-top: 330px; position: absolute;">
+        <input type="number" value="30" id="vin" oninput="mf4()" style="width:60px;" min=1 max=300> <br><b>Volt</b>
+    </div>
+
+    <div style="margin-left: 41vw; margin-top: 300px; position: absolute;">
+        <b>R</b> <br><input type="number" id="R2" oninput="mf2()" value=3 style="width:60px;" min=1 
+            max=10000><br>ohm
+    </div>
+
+    <div style="margin-left: 60vw; margin-top: 350px; position: absolute;">
+        <b>L</b>  <input type="number" id="R3" oninput="mf3()" value=6 style=" width: 60px; opacity:1;"
+            min=1 max=1000><br>Henry
+    </div>
+
+    <div style=" margin-left: 68vw; margin-top: 90px; position: absolute; background-color: bisque; font-size: larger;">
+        E: <span id="demo4"></span><br>
+        R:<span id="demo2"></span> <br>
+        L:<span id="demo3"></span> <br>
+        
+
+
+    </div>
+    <style>
+        .correct {
+            color: #155724;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+
+        .incorrect {
+            color: #721c24;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+
+ <div style="position:absolute ;  margin-left: 16vw; margin-top: 50vw;">
+
+    <table id="tableData" style=" border:solid;">
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Voltage(in volt)</th>
+                <th>Current(in amp)</th>
+                <th>Resistance
+                    /Reactance/impedence</th>
+                <th>Power(in watt)</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>R</td>
+                <td>Vin:<span id="demo5"></span> <br></td>
+                <td><input type="number" id="ir1" min="1" placeholder="Enter Current"></td>
+                <td>Rin:<span id="r"></span> <br></td>
+                <td><input type="number" id="pr1" min="1" placeholder="Enter Power"></td>
+               
+            </tr>
+
+            <tr>
+                <td>L</td>
+                <td>Vin:<span id="demo6"></span> <br></td>
+                <td><input type="number" id="ir2" placeholder="Enter Current"></td>
+                <td><input type="number" id="reactance" placeholder="Enter reactance"></td>
+                <td><input type="number" id="pr2" placeholder="Enter Power"></td>
+              
+            </tr>
+
+            <tr>
+                <td>Total</td>
+                <td>Vin:<span id="demo7"></span> <br></td>
+                <td><input type="number" id="ir3" placeholder="Enter Current"></td>
+                <td><input type="number" id="impedence" placeholder="Enter impedence"></td>
+                <td><input type="number" id="pr3" placeholder="Enter Power"></td>
+               
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
+
+
+        <div style="margin-top: 65vw; margin-left: 16vw; color: rgb(255, 255, 255); font-weight: bold; ">
+            <button onclick="checkvolt()"
+                style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Voltage</button>
+            <button onclick="checkcur()"
+                style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Current</button>
+            <button onclick="checkpow()"
+                style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify Power</button>
+        </div>
+        <hr>
+
+        <p id="voltverify"></p>
+        <p id="curverify"></p>
+        <p id="powverify"></p>
+
+
+        <hr>
+        <button  onclick="solve(),myFunctionAnswer()"
+            style=" margin-left: 16vw; color: #ffffff; font-weight: bold; background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040; margin-bottom: 20px;"
+            >Click
+            here to see answer</button>
+        <!-- <button onclick="checkFun()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click here to verify answer</button><br> -->
+        <br>
+    </div>
+
+
+
+    
+
+    
 
 
     <script src="RLC.js"></script>

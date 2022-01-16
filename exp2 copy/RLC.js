@@ -78,7 +78,7 @@ let pr3 = document.getElementById("pr3").value;
 let r2 = parseFloat(document.getElementById("R2").value);
 let L = parseFloat(document.getElementById("R3").value);
 let idlevr1 = parseFloat(document.getElementById("vin").value);
-let v =  parseFloat(document.getElementById("vin").value);
+ 
 idlecr1=v/r2;
 idlepr1=v*idlecr1;
 
@@ -93,21 +93,6 @@ idlevr1=v;
 idlevr2=v;
 idlevr3=v;
 
-document.getElementById("d1").innerHTML = idlecr1;
-document.getElementById("d2").innerHTML = idlecr1;
-document.getElementById("d3").innerHTML = idlecr1;
-
-document.getElementById("d4").innerHTML = idlevr1;
-document.getElementById("d5").innerHTML = idlevr2;
-document.getElementById("d6").innerHTML = idlevr3;
-
-document.getElementById("d7").innerHTML = r2;
-document.getElementById("d8").innerHTML = reactance;
-document.getElementById("d9").innerHTML = impedence;
-
-document.getElementById("d10").innerHTML = idlepr1;
-document.getElementById("d11").innerHTML = idlepr2;
-document.getElementById("d12").innerHTML = idlepr3;
 
 
 
@@ -116,20 +101,19 @@ document.getElementById("d12").innerHTML = idlepr3;
 
 
 
+    sessionStorage.setItem("nvr1",idlevr1);
+   sessionStorage.setItem("nvr2",idlevr2);
+   sessionStorage.setItem("nvr3",idlevr3);
 
-  //   sessionStorage.setItem("nvr1",idlevr1);
-  //  sessionStorage.setItem("nvr2",idlevr2);
-  //  sessionStorage.setItem("nvr3",idlevr3);
-
-  //  sessionStorage.setItem("nir1",idlecr1);
-  //  sessionStorage.setItem("nir2",idlecr2);
-  // sessionStorage.setItem("nir3",idletot);
+   sessionStorage.setItem("nir1",idlecr1);
+   sessionStorage.setItem("nir2",idlecr2);
+  sessionStorage.setItem("nir3",idletot);
 
   
 
-  //  sessionStorage.setItem("npr1",idlepr1);
-  // sessionStorage.setItem("npr2",idlepr2);
-  //  sessionStorage.setItem("npr3",idlepr3);
+   sessionStorage.setItem("npr1",idlepr1);
+  sessionStorage.setItem("npr2",idlepr2);
+   sessionStorage.setItem("npr3",idlepr3);
 
 }
 
