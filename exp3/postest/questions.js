@@ -3,55 +3,55 @@
 let questions = [
   {
   numb: 1,
-  question: "What is the phase angle between the capacitor current and the applied voltage in a parallel RC circuit?",
+  question: "DC Shunt Motor has a disadvantage __________",
   image: "",
-  answer: "90 degree",
+  answer: "Not suitable for rapidly changing loads",
   options: [
-    "90 degree",
-    "0 degree",
-    "45 degree",
-    "180degree"
+    "Constant speed",
+    "Less expensive",
+    "Not suitable for rapidly changing loads",
+    "Cannot be determined"
   ],
-  reason:'<p><img src="/q1i.png" style="width: 181px; height: 140px;"></p>  <p>The phasor diagram is drawn as:</p> <p><img src="/q1ii.png" style="width: 170px; height: 174px;"></p> <p><span style="color: rgb(32, 33, 36);  ">1) There is no&nbsp;</span><b style="color: rgb(32, 33, 36);  ">phase</b><span style="color: rgb(32, 33, 36);  ">&nbsp;difference&nbsp;</span><b style="color: rgb(32, 33, 36);  ">between</b><span style="color: rgb(32, 33, 36);  ">&nbsp;the&nbsp;</span><b style="color: rgb(32, 33, 36);  ">applied voltage</b><span style="color: rgb(32, 33, 36);  ">&nbsp;and the&nbsp;</span><b style="color: rgb(32, 33, 36);  ">voltage</b><span style="color: rgb(32, 33, 36);  ">&nbsp;across R and C in&nbsp;</span><b style="color: rgb(32, 33, 36);  ">parallel</b><span style="color: rgb(32, 33, 36);  ">. </span></p><p><span style="color: rgb(32, 33, 36);  ">2) The&nbsp;</span><b style="color: rgb(32, 33, 36);  ">current</b><span style="color: rgb(32, 33, 36);  ">&nbsp;through the resistive branch is in&nbsp;</span><b style="color: rgb(32, 33, 36);  ">phase</b><span style="color: rgb(32, 33, 36);  ">&nbsp;with the&nbsp;</span><b style="color: rgb(32, 33, 36);  ">applied</b><span style="color: rgb(32, 33, 36);  ">&nbsp;signal. </span></p><p><span style="color: rgb(32, 33, 36);  ">3) But the&nbsp;</span><b style="color: rgb(32, 33, 36);  ">current</b><span style="color: rgb(32, 33, 36);  ">&nbsp;through the capacitive branch leads its&nbsp;</span><b style="color: rgb(32, 33, 36);  ">voltage</b><span style="color: rgb(32, 33, 36);  ">&nbsp;V<sub>c</sub> by 90 degrees.</span></p>'
+  reason:"In DC shunt motor, due to shunt characteristics speed variation depends not only upon the controlling resistance but on the load current also. This double dependence makes it impossible to keep the speed sensibly constant on rapidly changing load, which is in contrast with characteristic."
 },
   {
   numb: 2,
-  question: "As frequency increases",
+  question: "For some percentage increase in the torque, which DC motor will have the least percentage increase of input current?",
   image: '',
-  answer: "both series and parallel RC impedance decrease",
+  answer: "Series motor",
   options: [
-    "both series and parallel RC impedance decrease",
-    "series RC impedance decreases and parallel RC impedance increases",
-    "series RC impedance increases and parallel RC impedance decreases",
-    "both series and parallel RC impedance increase"
+    "Series motor",
+    "Shunt motor",
+    "Cumulative compound motor",
+    "Separately exited motor"
   ],
-  reason: ""
+  reason: "The mechanical torque T is directly proportional to the product of flux per pole φ and armature current. In case of DC series motor, up to saturation point flux is proportional to field current because Ia = If. Now if small percentage increase in armature current (before saturation) will occur the same percentage of torque will increase. Whereas in DC series motor the torque is proportional to square of the armature current (before saturation)."
 },
   {
   numb: 3,
-  question: "Calculate the magnitude of the <b>impedance</b> in the given circuit.",
-  image: '<img src="https://www.indiabix.com/_files/images/basic-electronics/basics/mcq10_1003_1.gif"/>',
-  answer: "26.1 M ohms",
+  question: "Which part will surely tell that given motor is DC motor and not an AC type?",
+  image: '',
+  answer: "Commutator",
   options: [
-    "24.1 M ohms",
-    "10 M ohms",
-    "26.1 M ohms",
-    "0 ohms"
+    "Winding",
+    "Shaft",
+    "Commutator",
+    "Stator"
   ],
-  reason: ""
+  reason: "All other parts except brushes and commutator are same in AC machine when outer looks are only taken in consideration. Commutator is used only in DC machine for providing mechanical rectification and not in AC machine.  "
 },
   {
   numb: 4,
-  question: "	What is the phase angle for a parallel circuit consisting of a 500 kHz, 5 Vac source with a 47 pF capacitor, and a 4.7 ohms resistor in parallel?",
+  question: "What will happen, with the increase in speed of a DC motor?",
   image: '',
-  answer: "3.3A, 8.5A, -2.4A",
+  answer: "Back emf increase but line current falls.",
   options: [
-    "55.3 <sup>o</sup?",
-    "-55.3 <sup>o</sup?",
-    "34.8 <sup>o</sup?",
-    "-34.8 <sup>o</sup?"
+    "Back emf increase but line current falls.",
+    "Back emf falls and line current increase.",
+    "Both back emf as well as line current increase.",
+    "Both back emf as well as line current fall."
   ],
-  reason: ""
+  reason: "In case of DC motor, the speed is proportional to the back emf (Ea ∝ N). So, with the increase in speed, the back emf also increases. Therefore, armature current is also decreased, in case of series motor, armature current is equal to the line or load current."
 },
 // you can uncomment the below codes and make duplicate as more as you want to add question
 // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
