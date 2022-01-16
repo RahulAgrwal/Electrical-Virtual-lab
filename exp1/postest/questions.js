@@ -11,7 +11,8 @@ let questions = [
       "i1+i4+i3=i5+i2",
       "i1-i5=i2-i3-i4",
       "i1+i5=i2+i3+i4"
-    ]
+    ],
+    reason:"According to KCL, entering currents=leaving currents."
   },
     {
     numb: 2,
@@ -23,7 +24,8 @@ let questions = [
       "17.2 ohms",
       "17.4 ohms",
       "17.8 ohms"
-    ]
+    ],
+    reason: "KVL: 70 – 5I – 7(I – 2) = 0<br>    I = 7A<br>    KVL to 2nd loop: 7(I – 2) – 2R = 0<br>    R=17.5Ω"
   },
     {
     numb: 3,
@@ -35,7 +37,8 @@ let questions = [
       "One",
       "Zero",
       "Negative Polarity"
-    ]
+    ],
+    reason: "KVL"
   },
     {
     numb: 4,
@@ -47,7 +50,8 @@ let questions = [
       "3A, -8A, 2A",
       "3.3A, 8.5A, -2.4A",
       "3.2A, 8.6A, 2.3A"
-    ]
+    ],
+    reason: ""
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question
   // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....

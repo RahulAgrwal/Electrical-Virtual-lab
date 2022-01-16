@@ -102,7 +102,7 @@ function showQuetions(index) {
     const que_text = document.querySelector(".que_text");
 
     //creating a new span and div tag for question and option and passing the value using array index
-    let que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
+    let que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '<br>'+questions[index].image+'</span>';
     let option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>'
         + '<div class="option"><span>' + questions[index].options[1] + '</span></div>'
         + '<div class="option"><span>' + questions[index].options[2] + '</span></div>'
