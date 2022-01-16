@@ -34,13 +34,14 @@
 
 .table{
     position: absolute;
-    margin: 0;
+    margin-left: 90px;
     padding-top: 60px;
     padding-left: 400px;
     float: left;
     align-content: center;
     margin-top: 0px;
 }
+
 .heading{
     text-align: center;
     padding-bottom: 5px;
