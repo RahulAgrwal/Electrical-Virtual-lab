@@ -56,7 +56,7 @@ function myFunction() {
 
 
 function solve(){
-  var idletot=0,dlevr1 = 0, idlevr2 = 0, idlevr3 = 0, idlecr1 = 0, idlecr2 = 0, idlecr3 = 0, idlepr1 = 0, idlepr2 = 0, idlepr3 = 0;
+  var idletot=0,dlevr1 = 0, idlevr2 = 0, idlevr3 = 0, idlecr1 = 0, idlecr2 = 0, idlecr3 = 0, idlepr1 = 0, idlepr2 = 0, idlepr3 = 0, idleimp=0,idlereact=0;
 
 
 let ir1 = document.getElementById("ir1").value;
@@ -83,6 +83,9 @@ idlecr1=v/r2;
 idlepr1=v*idlecr1;
 
 let xl=2*3.14*50*L;
+idlereact=xl;
+idleimp=Math.sqrt(Math.pow(r2,2)+Math.pow(xl,2));
+let idleres=r2;
 
 idlecr2=v/xl;
 idlepr2=v*idlecr2;
@@ -93,43 +96,52 @@ idlevr1=v;
 idlevr2=v;
 idlevr3=v;
 
-document.getElementById("d1").innerHTML = idlecr1;
-document.getElementById("d2").innerHTML = idlecr1;
-document.getElementById("d3").innerHTML = idlecr1;
+idlepr3=v*idletot;
 
-document.getElementById("d4").innerHTML = idlevr1;
-document.getElementById("d5").innerHTML = idlevr2;
-document.getElementById("d6").innerHTML = idlevr3;
+// document.getElementById("d1").innerHTML = idlecr1;
+// document.getElementById("d2").innerHTML = idlecr2;
+// document.getElementById("d3").innerHTML = idletot;
 
-document.getElementById("d7").innerHTML = r2;
-document.getElementById("d8").innerHTML = reactance;
-document.getElementById("d9").innerHTML = impedence;
+// document.getElementById("d4").innerHTML = idlevr1;
+// document.getElementById("d5").innerHTML = idlevr2;
+// document.getElementById("d6").innerHTML = idlevr3;
 
-document.getElementById("d10").innerHTML = idlepr1;
-document.getElementById("d11").innerHTML = idlepr2;
-document.getElementById("d12").innerHTML = idlepr3;
+// document.getElementById("d7").innerHTML = r2;
+// document.getElementById("d8").innerHTML = reactance;
+// document.getElementById("d9").innerHTML = impedence;
 
-
-
-
+// document.getElementById("d10").innerHTML = idlepr1;
+// document.getElementById("d11").innerHTML = idlepr2;
+// document.getElementById("d12").innerHTML = idlepr3;
 
 
 
 
 
-  //   sessionStorage.setItem("nvr1",idlevr1);
-  //  sessionStorage.setItem("nvr2",idlevr2);
-  //  sessionStorage.setItem("nvr3",idlevr3);
 
-  //  sessionStorage.setItem("nir1",idlecr1);
-  //  sessionStorage.setItem("nir2",idlecr2);
-  // sessionStorage.setItem("nir3",idletot);
+
+
+
+    sessionStorage.setItem("nvr1",idlevr1);
+   sessionStorage.setItem("nvr2",idlevr2);
+   sessionStorage.setItem("nvr3",idlevr3);
+
+   sessionStorage.setItem("nir1",idlecr1);
+   sessionStorage.setItem("nir2",idlecr2);
+  sessionStorage.setItem("nir3",idletot);
+
+
+
+  sessionStorage.setItem("res1",r2);
+   sessionStorage.setItem("res2",idlereact);
+   sessionStorage.setItem("res3",idleimp);
+
 
   
 
-  //  sessionStorage.setItem("npr1",idlepr1);
-  // sessionStorage.setItem("npr2",idlepr2);
-  //  sessionStorage.setItem("npr3",idlepr3);
+   sessionStorage.setItem("npr1",idlepr1);
+  sessionStorage.setItem("npr2",idlepr2);
+   sessionStorage.setItem("npr3",idlepr3);
 
 }
 
@@ -190,27 +202,23 @@ function checkcur() {
   let ir2 = document.getElementById("ir2").value;
   let ir3 = document.getElementById("ir3").value;
 
-  let r1 = parseFloat(document.getElementById("R1").value);
   let r2 = parseFloat(document.getElementById("R2").value);
-  let r3 = parseFloat(document.getElementById("R3").value);
-  let v = parseFloat(document.getElementById("vin").value);
+  let L = parseFloat(document.getElementById("R3").value);
+  let v =  parseFloat(document.getElementById("vin").value);
+  let idlecr1=v/r2;
+  let xl=2*3.14*50*L;
 
-  let rs = (r2 * r3) / (r2 + r3);
+ let idlecr2=v/xl;
+ let idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
 
-  let idlevr2 = (rs / (rs + r1)) * v;//r2
-  let idlevr3 = idlevr2;//r3
-  let idlevr1 = v - idlevr2;//r1
 
-  let idlecr1 = idlevr1 / r1;//cr1
-  let idlecr2 = idlevr2 / r2;//cr2
-  let idlecr3 = idlevr2 / r3;//cr3
 
   document.getElementById("ir1").classList.add("correct");
   document.getElementById("ir2").classList.add("correct");
   document.getElementById("ir3").classList.add("correct");
 
-  if (Math.round(ir1) == Math.round(idlecr1) && Math.round(ir2) == Math.round(idlecr2) && Math.round(ir3) == Math.round(idlecr3)) {
-    document.getElementById("curverify").innerHTML = "Current  Verified.";
+  if (Math.round(ir1) == Math.round(idlecr1) && Math.round(ir2) == Math.round(idlecr2) && Math.round(ir3) == Math.round(idletot)) {
+    document.getElementById("curverify").innerHTML = "<b>Current  Verified.</b>";
   }
   else {
 
@@ -224,7 +232,7 @@ function checkcur() {
       document.getElementById("ir2").classList.add("incorrect");
     }
 
-    if (Math.round(ir3) != Math.round(idlecr3)) {
+    if (Math.round(ir3) != Math.round(idletot)) {
       document.getElementById("curverify").innerHTML = "Current through R3 is wrong! Try again.";
       document.getElementById("ir3").classList.add("incorrect");
     }
