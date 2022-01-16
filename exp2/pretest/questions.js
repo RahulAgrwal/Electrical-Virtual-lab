@@ -2,7 +2,7 @@
 let questions = [
   {
     numb: 1,
-    question: "Consider the following statements:<p >i. Power factor will be unity.<br>ii. Current in circuit will be maximum.<br>iii. Current in circuit will be minimum.<br>Which of these statements are correct with respect to resonance in R-L-C parallel circuit?</p>",
+    question: "<b>Consider the following statements:</b><p >i. Power factor will be unity.<br>ii. Current in circuit will be maximum.<br>iii. Current in circuit will be minimum.<br><b>Which of these statements are correct with respect to resonance in R-L-C parallel circuit?</b></p>",
     answer: "i and iii only",
     options: [
       "i, ii and iii",
@@ -14,7 +14,7 @@ let questions = [
   },
   {
     numb: 2,
-    question: "AC measuring instrument measures",
+    question: "<b>AC measuring instrument measures</b>",
     answer: "rms value",
     options: [
       "rms value",
@@ -26,7 +26,7 @@ let questions = [
   },
   {
     numb: 3,
-    question: "Alternating voltage",
+    question: "<b>Alternating voltage</b>",
     answer: "varies sinusoidally",
     options: [
       "is independent of time	",
@@ -38,7 +38,7 @@ let questions = [
   },
   {
     numb: 4,
-    question: "The Q-factor of the resistance coil is _________________",
+    question: "<b>The Q-factor of the resistance coil is _________________</b>",
     answer: "Infinitely High",
     options: [
       "Zero",
@@ -50,7 +50,7 @@ let questions = [
   },
   {
     numb: 5,
-    question: "What will happen if parallel RL connected to a DC power source?",
+    question: "<b>What will happen if parallel RL connected to a DC power source?</b>",
     answer: "Maximum current will flow through circuit.",
     options: [
       "No current will flow through circuit",
@@ -62,7 +62,7 @@ let questions = [
   },
   {
     numb: 6,
-    question: "Without tuning circuit no _______________ would be possible",
+    question: "<b>Without tuning circuit no _______________ would be possible.</b>",
     answer: "Communication",
     options: [
       "Oscillation",

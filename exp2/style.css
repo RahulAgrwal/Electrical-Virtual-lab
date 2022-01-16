@@ -197,13 +197,13 @@ section{
 
 section .que_text{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     border-top: 1.1px black;
 }
 section .ans_text{
     margin-top: 5px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     border-top: 1px solid lightgrey;
 }
 section .option_list{
