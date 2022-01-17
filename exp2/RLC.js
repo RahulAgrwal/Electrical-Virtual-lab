@@ -331,7 +331,7 @@ function checkpow() {
 }
 
 //rc circuit
-function solve2(){
+function solve2() {
   var idletot=0,dlevr1 = 0, idlevr2 = 0, idlevr3 = 0, idlecr1 = 0, idlecr2 = 0, idlecr3 = 0, idlepr1 = 0, idlepr2 = 0, idlepr3 = 0, idleimp=0,idlereact=0;
 
 
@@ -433,13 +433,23 @@ function checkvolt2() {
   
   let reactance = document.getElementById("reactance").value;
   let impedence = document.getElementById("impedence").value;
-  let L = parseFloat(document.getElementById("R3").value);
+  let C = parseFloat(document.getElementById("R3").value);
   let r2 = parseFloat(document.getElementById("R2").value);
+  let f =  parseFloat(document.getElementById("f").value);
 
 
-  let xc=1/(2*3.14*reactance);
+
+  let v =  parseFloat(document.getElementById("vin").value);
+  let idlecr1=v/r2;
+  let xl=1/(2*3.14*f*C);
+let idlecr2=v/xl;
+let idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
+
+
+
+  let xc=1/(2*3.14*f*C);
   let idlereact=xc;
-  let idleimp=xc/(Math.sqrt(Math.pow(r2,2)+Math.pow(xc,2)));
+  let idleimp=v/idletot;
 
 
   document.getElementById("reactance").classList.add("correct");
@@ -454,7 +464,7 @@ function checkvolt2() {
   else {
 
     if (Math.round(reactance) != Math.round(idlereact)) {
-      document.getElementById("voltverify").innerHTML = "Inductor Reactance is wrong! Try again.";
+      document.getElementById("voltverify").innerHTML = "Capacitor Reactance is wrong! Try again.";
       document.getElementById("reactance").classList.add("incorrect");
     }
 
@@ -469,3 +479,119 @@ function checkvolt2() {
 
 }
 
+//current in RC
+
+function checkcur2() {
+  let ir1 = document.getElementById("ir1").value;
+  let ir2 = document.getElementById("ir2").value;
+  let ir3 = document.getElementById("ir3").value;
+  let f =  parseFloat(document.getElementById("f").value);
+
+
+  let r2 = parseFloat(document.getElementById("R2").value);
+  let C = parseFloat(document.getElementById("R3").value);
+  let v =  parseFloat(document.getElementById("vin").value);
+  let idlecr1=v/r2;
+  let xc=1/(2*3.14*f*C);
+
+ let idlecr2=v/xc;
+ let idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
+
+
+
+  document.getElementById("ir1").classList.add("correct");
+  document.getElementById("ir2").classList.add("correct");
+  document.getElementById("ir3").classList.add("correct");
+
+  if (Math.round(ir1) == Math.round(idlecr1) && Math.round(ir2) == Math.round(idlecr2) && Math.round(ir3) == Math.round(idletot)) {
+    document.getElementById("curverify").innerHTML = "<b>Current  Verified.</b>";
+    document.getElementById("ir1").classList.add("correct");
+    document.getElementById("ir2").classList.add("correct");
+    document.getElementById("ir3").classList.add("correct");
+  }
+  else {
+
+    if (Math.round(ir1) != Math.round(idlecr1)) {
+      document.getElementById("curverify").innerHTML = "Current through resistor R is wrong! Try again.";
+      document.getElementById("ir1").classList.add("incorrect");
+    }
+
+    if (Math.round(ir2) != Math.round(idlecr2)) {
+      document.getElementById("curverify").innerHTML = "Current through inductor L is wrong! Try again.";
+      document.getElementById("ir2").classList.add("incorrect");
+    }
+
+    if (Math.round(ir3) != Math.round(idletot)) {
+      document.getElementById("curverify").innerHTML = " Total Current is wrong! Try again.";
+      document.getElementById("ir3").classList.add("incorrect");
+    }
+  }
+}
+
+
+
+
+
+function checkpow2()
+{
+  var idletot=0,dlevr1 = 0, idlevr2 = 0, idlevr3 = 0, idlecr1 = 0, idlecr2 = 0, idlecr3 = 0, idlepr1 = 0, idlepr2 = 0, idlepr3 = 0, idleimp=0,idlereact=0;
+
+  let pr1 = document.getElementById("pr1").value;
+  let pr2 = document.getElementById("pr2").value;
+  let pr3 = document.getElementById("pr3").value;
+
+let r2 = parseFloat(document.getElementById("R2").value);
+let C = parseFloat(document.getElementById("R3").value);
+let idlevr1 = parseFloat(document.getElementById("vin").value);
+let v =  parseFloat(document.getElementById("vin").value);
+let f =  parseFloat(document.getElementById("f").value);
+idlecr1=v/r2;
+idlepr1=v*idlecr1;
+
+let xl=1/(2*3.14*f*C);
+idlereact=xl;
+
+
+
+idlecr2=v/xl;
+idlepr2=v*idlecr2;
+idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
+idleimp=v/idletot;
+
+
+
+idlepr3=v*idletot;
+
+
+document.getElementById("pr1").classList.add("correct");
+document.getElementById("pr2").classList.add("correct");
+document.getElementById("pr3").classList.add("correct");
+
+if (Math.round(pr1) == Math.round(idlepr1) && Math.round(pr2) == Math.round(idlepr2) && Math.round(pr3) == Math.round(idlepr3)) {
+  document.getElementById("powverify").innerHTML = "<b>Power Verified.</b>";
+  document.getElementById("pr1").classList.add("correct");
+document.getElementById("pr2").classList.add("correct");
+document.getElementById("pr3").classList.add("correct");
+
+}
+else {
+
+  if (Math.round(pr1) != Math.round(idlepr1)) {
+    document.getElementById("powverify").innerHTML = "Power in R is wrong! Try again.";
+    document.getElementById("pr1").classList.add("incorrect");
+
+  }
+
+  if (Math.round(pr2) != Math.round(idlepr2)) {
+    document.getElementById("powverify").innerHTML = "Power in L is wrong! Try again.";
+    document.getElementById("pr2").classList.add("incorrect");
+  }
+
+  if (Math.round(pr3) != Math.round(idlepr3)) {
+    document.getElementById("powverify").innerHTML = " Total Power is wrong! Try again.";
+    document.getElementById("pr3").classList.add("incorrect");
+  }
+}
+
+
+}
