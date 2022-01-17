@@ -28,11 +28,13 @@ function mf3() {
 
 function mf4() {
   var v = document.getElementById("vin");
+  var f=document.getElementById("f");
 
   var output4 = document.getElementById("demo4");
   var output5 = document.getElementById("demo5");
   var output6 = document.getElementById("demo6");
   var output7 = document.getElementById("demo7");
+  var output8=document.getElementById("d5");
   output4.innerHTML = v.value;
 
   v.oninput = function () {
@@ -40,6 +42,10 @@ function mf4() {
     output5.innerHTML = this.value;
     output6.innerHTML = this.value;
     output7.innerHTML = this.value;
+  }
+  f.oninput=function ()
+  {
+    output8.innerHTML=this.value;
   }
 }
 
@@ -84,13 +90,13 @@ idlepr1=v*idlecr1;
 
 let xl=2*3.14*50*L;
 idlereact=xl;
-idleimp=Math.sqrt(Math.pow(r2,2)+Math.pow(xl,2));
+
 let idleres=r2;
 
 idlecr2=v/xl;
 idlepr2=v*idlecr2;
 idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
-
+idleimp=v/idletot;
 
 idlevr1=v;
 idlevr2=v;
@@ -158,11 +164,18 @@ function checkvolt() {
   let impedence = document.getElementById("impedence").value;
   let L = parseFloat(document.getElementById("R3").value);
   let r2 = parseFloat(document.getElementById("R2").value);
+  let v =  parseFloat(document.getElementById("vin").value);
 
 
   let xl=2*3.14*50*L;
   let idlereact=xl;
-  let idleimp=Math.sqrt(Math.pow(r2,2)+Math.pow(xl,2));
+
+   let idlecr1=v/r2;
+  let idlecr2=v/xl;
+  let idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
+
+  let idleimp=v/idletot;
+
 
 
   document.getElementById("reactance").classList.add("correct");
@@ -269,14 +282,14 @@ function checkpow() {
   
   let xl=2*3.14*50*L;
   idlereact=xl;
-  idleimp=Math.sqrt(Math.pow(r2,2)+Math.pow(xl,2));
+
   let idleres=r2;
   
   idlecr2=v/xl;
   idlepr2=v*idlecr2;
   idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
   
-  
+  idleimp=v/idletot;
   idlevr1=v;
   idlevr2=v;
   idlevr3=v;
