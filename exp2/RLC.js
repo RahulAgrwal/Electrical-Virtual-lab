@@ -342,18 +342,19 @@ let r2 = parseFloat(document.getElementById("R2").value);
 let C = parseFloat(document.getElementById("R3").value);
 let idlevr1 = parseFloat(document.getElementById("vin").value);
 let v =  parseFloat(document.getElementById("vin").value);
+let f =  parseFloat(document.getElementById("f").value);
 idlecr1=v/r2;
 idlepr1=v*idlecr1;
 
-let xl=1/(2*3.14*400*C);
+let xl=1/(2*3.14*f*C);
 idlereact=xl;
-idleimp=xl/(Math.sqrt(Math.pow(r2,2)+Math.pow(xl,2)));
+
 let idleres=r2;
 
 idlecr2=v/xl;
 idlepr2=v*idlecr2;
 idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
-
+idleimp=v/idletot;
 
 idlevr1=v;
 idlevr2=v;
