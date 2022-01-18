@@ -34,6 +34,7 @@ function mf4() {
   var output5 = document.getElementById("demo5");
   var output6 = document.getElementById("demo6");
   var output7 = document.getElementById("demo7");
+  var output9 = document.getElementById("demo8");
   var output8=document.getElementById("d5");
   output4.innerHTML = v.value;
 
@@ -42,6 +43,7 @@ function mf4() {
     output5.innerHTML = this.value;
     output6.innerHTML = this.value;
     output7.innerHTML = this.value;
+    output9.innerHTML = this.value;
   }
   f.oninput=function ()
   {
@@ -49,6 +51,16 @@ function mf4() {
   }
 }
 
+function mf1() {
+  var res3 = document.getElementById("R1");
+
+  var output3 = document.getElementById("demo1");
+  output3.innerHTML = res3.value;
+
+  res3.oninput = function () {
+    output3.innerHTML = this.value;
+  }
+}
 
 
 
@@ -595,3 +607,104 @@ else {
 
 
 }
+
+//rlc ckt
+
+function solve3() {
+  var idletot=0,dlevr1 = 0, idlevr2 = 0, idlevr3 = 0, idlecr1 = 0, idlecr2 = 0, idlecr3 = 0, idlepr1 = 0, idlepr2 = 0, idlepr3 = 0, idleimp=0,idlereact=0;
+
+
+let ir1 = document.getElementById("ir1").value;
+let pr1 = document.getElementById("pr1").value;
+
+//row2
+
+let ir2 = document.getElementById("ir2").value;
+let reactance = document.getElementById("reactance").value;
+let pr2 = document.getElementById("pr2").value;
+
+//row3
+
+let ir3 = document.getElementById("ir3").value;
+let impedence = document.getElementById("impedence").value;
+let pr3 = document.getElementById("pr3").value;
+
+
+let r2 = parseFloat(document.getElementById("R2").value);
+let L=parseFloat(document.getElementById("R1").value);
+let C = parseFloat(document.getElementById("R3").value);
+let idlevr1 = parseFloat(document.getElementById("vin").value);
+let v =  parseFloat(document.getElementById("vin").value);
+let f =  parseFloat(document.getElementById("f").value);
+idlecr1=v/r2;
+idlepr1=v*idlecr1;
+
+let xl=2*3.14*f*L;
+let xlc=1/(2*3.14*f*C);
+let idlereactl=xl;
+let idlereactc=xlc;
+
+let idleres=r2;
+
+idlecr2=v/xl;
+idlepr2=v*idlecr2;
+
+idlecr3=v/xlc;
+
+idletot=Math.sqrt(Math.pow(idlecr1,2)+Math.pow(idlecr2,2));
+idleimp=v/idletot;
+
+idlevr1=v;
+idlevr2=v;
+idlevr3=v;
+
+idlepr3=v*idletot;
+
+// document.getElementById("d1").innerHTML = idlecr1;
+// document.getElementById("d2").innerHTML = idlecr2;
+// document.getElementById("d3").innerHTML = idletot;
+
+// document.getElementById("d4").innerHTML = idlevr1;
+// document.getElementById("d5").innerHTML = idlevr2;
+// document.getElementById("d6").innerHTML = idlevr3;
+
+// document.getElementById("d7").innerHTML = r2;
+// document.getElementById("d8").innerHTML = reactance;
+// document.getElementById("d9").innerHTML = impedence;
+
+// document.getElementById("d10").innerHTML = idlepr1;
+// document.getElementById("d11").innerHTML = idlepr2;
+// document.getElementById("d12").innerHTML = idlepr3;
+
+
+
+
+
+
+
+
+
+    sessionStorage.setItem("nvr1",idlevr1);
+   sessionStorage.setItem("nvr2",idlevr2);
+   sessionStorage.setItem("nvr3",idlevr3);
+
+   sessionStorage.setItem("nir1",idlecr1);
+   sessionStorage.setItem("nir2",idlecr2);
+  sessionStorage.setItem("nir3",idletot);
+
+
+
+  sessionStorage.setItem("res1",r2);
+   sessionStorage.setItem("res2",idlereactl);
+   sessionStorage.setItem("res3",idleimp);
+
+
+  
+
+   sessionStorage.setItem("npr1",idlepr1);
+  sessionStorage.setItem("npr2",idlepr2);
+   sessionStorage.setItem("npr3",idlepr3);
+
+}
+
+

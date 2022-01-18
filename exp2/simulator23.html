@@ -17,7 +17,6 @@
   <link rel="canonical" href="https://engg.dypvp.edu.in/" />
   <link rel="stylesheet" type="text/css" href="/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css" />
-  
   <style type="text/css">
     html,
     body {
@@ -135,8 +134,8 @@
     <a href="/index.html">Electrical Circuit Virtual Lab</a> >
     <a href="aim.html">To study and verify Parallel RC, RL & LC Circuit</a>
     >
-    <a href="Theory.html">Simulator</a>
-    ><a href="simulator21.html">RL Parallel Circuit</a>
+    <a href="Simulator.html">Simulator</a>
+    ><a href="simulator23.html">RLC Parallel Circuit</a>
   </div>
 
   <div class="placeh2">
@@ -160,16 +159,17 @@
   <!-- img -->
   <div style="position:absolute; margin-left: 16vw;">
 
-          <img height=600px width=700px style="margin-top: 35px;  padding-top: 60px;" src="https://electricalacademia.com/wp-content/uploads/2019/10/parallel-rl-circuit.gif">
+        <img height=600px width=700px style="margin-top: 35px;  padding-top: 60px;" src="https://electricalacademia.com/wp-content/uploads/2019/10/parallel-rc-circuit.gif">
 
   </div>
   
   
   <!-- equation -->
 <div style="position: absolute; margin-left: 74vw; margin-top: 90px;">
-  <img src="theoryimage/eqnRL.png" height=200px width=300px>
+  <img src="theoryimage/eqnRC.png" height=200px width=300px>
 </div>
-
+  
+  
 
   <!-- procedure -->
   <div style="position: absolute; margin-left: 74vw; margin-top: 40px;">
@@ -177,8 +177,12 @@
       onclick="myFunction()">Procedure</button>
   </div>
   <!-- input -->
-  <div style="margin-left: 330px; margin-top: 330px; position: absolute;">
+  <div style="margin-left: 340px; margin-top: 330px; position: absolute;">
     <input type="number" value="30" id="vin" oninput="mf4()" style="width:60px;" min=1 max=300> <br><b>Volt</b>
+  </div>
+
+  <div style="margin-left: 340px; margin-top: 380px; position: absolute;">
+    <input type="number" value="50" id="f" oninput="mf4()" style="width:60px;" min=1 max=300> <br><b>Frequency</b>
   </div>
 
   <div style="margin-left: 41vw; margin-top: 300px; position: absolute;">
@@ -186,14 +190,21 @@
   </div>
 
   <div style="margin-left: 60vw; margin-top: 350px; position: absolute;">
-    <b>L</b> <input type="number" id="R3" oninput="mf3()" value=6 style=" width: 60px; opacity:1;" 
+    <b>L</b> <input type="number" id="R1" oninput="mf1()" value=6 style=" width: 60px; opacity:1;" 
       max=1000><br>Henry
+  </div>
+
+  <div style="margin-left: 70vw; margin-top: 350px; position: absolute;">
+    <b>C</b> <input type="number" id="R3" oninput="mf3()" value=6 style=" width: 60px; opacity:1;" 
+      max=1000><br>Farad
   </div>
 
   <div style=" margin-left: 68vw; margin-top: 90px; position: absolute; background-color: bisque; font-size: larger;">
     E: <span id="demo4">30</span><br>
     R:<span id="demo2">3</span> <br>
-    L:<span id="demo3">6</span> <br>
+    L:<span id="demo1">6</span> <br>
+    C:<span id="demo3">6</span> <br>
+    f:<span id="d5">50</span>
 
 
 
@@ -247,13 +258,23 @@
         </tr>
 
         <tr>
+            <td>C</td>
+            <td>Vin:<span id="demo7"></span> <br></td>
+            <td><input type="number" id="ir2" placeholder="Enter Current"></td>
+            <td><input type="number" id="reactance" placeholder="Enter reactance"></td>
+            <td><input type="number" id="pr2" placeholder="Enter Power"></td>
+  
+        </tr>
+
+        <tr>
           <td>Total</td>
-          <td>Vin:<span id="demo7"></span> <br></td>
+          <td>Vin:<span id="demo8"></span> <br></td>
           <td><input type="number" id="ir3" placeholder="Enter Current"></td>
           <td><input type="number" id="impedence" placeholder="Enter impedence"></td>
           <td><input type="number" id="pr3" placeholder="Enter Power"></td>
 
         </tr>
+
       </tbody>
 
     </table>
@@ -262,11 +283,11 @@
 
 
   <div style="margin-top: 65vw; margin-left: 16vw; color: rgb(255, 255, 255); font-weight: bold; ">
-    <button onclick="checkvolt()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
+    <button onclick="checkvolt2()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
       Reactance/Impedance</button>
-    <button onclick="checkcur()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
+    <button onclick="checkcur2()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
       Current</button>
-    <button onclick="checkpow()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
+    <button onclick="checkpow2()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
       Power</button>
   </div>
   <hr>
@@ -280,7 +301,7 @@
 
   <hr>
   </div>
-  <button onclick="solve(),myFunctionAnswer()"
+  <button onclick="solve3(),myFunctionAnswer()"
     style=" margin-left: 16vw; color: #ffffff; font-weight: bold; background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040; margin-bottom: 20px;">Click
     here to see answer</button>
   <!-- <button onclick="checkFun()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Click here to verify answer</button><br> -->
