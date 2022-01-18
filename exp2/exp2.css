@@ -149,3 +149,28 @@
       font-weight: bold;
       color:black;
   }
+.tab{
+    overflow: hidden;
+    border: 1px solid rgb(255, 157, 0);
+    background-color: #ebe708;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: bold;
+    
+  }
+  .tab button:hover {
+    background-color: rgb(230, 114, 6);
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: rgb(212, 13, 13);
+  }
