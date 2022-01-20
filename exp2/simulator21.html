@@ -3,6 +3,7 @@
 
 <head>
   <title>Virtual lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="exp2.css" />
   <link rel="stylesheet" href="/mycss.css" />
   <link rel="stylesheet" href="/bootstrap.css" />
@@ -152,51 +153,57 @@
     </ul>
   </div>
 
-  <div class="tab">
+  <div class="tab" >
     <button  ><a href="simulator21.html">RL Parallel Circuit</a></button>
       <button ><a href="simulator22.html">RC Parallel Circuit</a></button>
   </div>
   <!-- img -->
-  <div style="position:absolute; margin-left: 16vw;">
+  <div style=" display:inline;position:unset ; background-color: #155724;  margin-right: 20%;width:50%;  ">
 
-          <img height=600px width=700px style="margin-top: 35px;  padding-top: 60px;" src="https://electricalacademia.com/wp-content/uploads/2019/10/parallel-rl-circuit.gif">
+          <img height=20% width="50%" src="https://electricalacademia.com/wp-content/uploads/2019/10/parallel-rl-circuit.gif"  >
 
   </div>
+
+  <div style="position:absolute; margin-left: 70vw; top: 65%; font-weight: bolder; font-size: 20px; clear: both;background-color: violet; z-index: -1;">
+    E: <span id="demo4">30</span><br>
+    R:<span id="demo2">3</span> <br>
+    L:<span id="demo3">6</span> <br>
+    f:<span id="d5">50</span>
+  </div>
+
   
   
   <!-- equation -->
-<div style="position: absolute; margin-left: 74vw; margin-top: 90px;">
-  <img src="theoryimage/eqnRL.png" height=200px width=300px>
+<div style=" position:unset;  display: inline-block; margin-left: 64.8vw; margin-top: 5vw; background-color: rgb(255, 255, 255); top:20%; ">
+  <img src="theoryimage/eqnRL.png" height=30% width=50% style="position: unset;">
 </div>
 
 
   <!-- procedure -->
-  <div style="position: absolute; margin-left: 74vw; margin-top: 40px;">
+  <div style="position: absolute; margin-left: 70vw; top: 55%; z-index: -1;">
     <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;"
       onclick="myFunction()">Procedure</button>
   </div>
   <!-- input -->
-  <div style="margin-left: 330px; margin-top: 330px; position: absolute;">
+  <div style="margin-left: 23%; top: 70%; position: absolute;">
     <input type="number" value="30" id="vin" oninput="mf4()" style="width:60px;" min=1 max=300> <br><b>Volt</b>
   </div>
 
-  <div style="margin-left: 41vw; margin-top: 300px; position: absolute;">
+  <div style="margin-left: 23%; top: 79%; position: absolute;">
+    <input type="number" value="50" id="f" oninput="mf4()" style="width:60px;" min=1 max=300> <br><b>Frequency</b>
+  </div>
+
+  <div style="margin-left: 42vw; top: 81%; position: absolute; " >
     <b>R</b> <br><input type="number" id="R2" oninput="mf2()" value=3 style="width:60px;" min=1 max=10000><br>ohm
   </div>
 
-  <div style="margin-left: 60vw; margin-top: 350px; position: absolute;">
+  <div  style="margin-left: 55vw; top: 63%; position: absolute; ">
     <b>L</b> <input type="number" id="R3" oninput="mf3()" value=6 style=" width: 60px; opacity:1;" 
       max=1000><br>Henry
   </div>
 
-  <div style=" margin-left: 68vw; margin-top: 90px; position: absolute; background-color: bisque; font-size: larger;">
-    E: <span id="demo4">30</span><br>
-    R:<span id="demo2">3</span> <br>
-    L:<span id="demo3">6</span> <br>
+ 
 
-
-
-  </div>
   <style>
     .correct {
       color: #155724;
@@ -211,7 +218,7 @@
     }
   </style>
 
-  <div style="position:absolute ;  margin-left: 16vw; margin-top: 50vw;">
+  <div style="position:unset ;  margin-left: 14vw; margin-top: -10vw;">
 
     <table id="tableData" style=" border:solid;">
       <thead>
@@ -257,10 +264,15 @@
 
     </table>
   </div>
+   
+  <div style="position: relative; margin-left: 17vw;">
+    <p id="voltverify"></p>
+    <p id="curverify"></p>
+    <p id="powverify"></p>
+  
+    </div>
 
-
-
-  <div style="margin-top: 65vw; margin-left: 16vw; color: rgb(255, 255, 255); font-weight: bold; ">
+  <div style="margin-top: 7vw; margin-left: 16vw; color: rgb(255, 255, 255); font-weight: bold; ">
     <button onclick="checkvolt()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
       Reactance/Impedance</button>
     <button onclick="checkcur()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
@@ -268,17 +280,10 @@
     <button onclick="checkpow()" style="background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040;">Verify
       Power</button>
   </div>
-  <hr>
-<div style="position: relative; margin-left: 17vw;">
-  <p id="voltverify"></p>
-  <p id="curverify"></p>
-  <p id="powverify"></p>
+  
 
 
-  <hr>
 
-  <hr>
-  </div>
   <button onclick="solve(),myFunctionAnswer()"
     style=" margin-left: 16vw; color: #ffffff; font-weight: bold; background-color: rgb(131, 125, 125); box-shadow: 1.5px 2.5px #424040; margin-bottom: 20px;">Click
     here to see answer</button>
