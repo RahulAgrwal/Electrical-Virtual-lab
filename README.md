@@ -7,9 +7,9 @@
 <b> Lab | <b> Electrical Circuit Virtual Lab
 
 ## List of Experiments
-1. <a href="exp1/aim.html" style="color:black">To verify Kirchhoff’s Laws: Kirchhoff’s Current Law, Kirchhoff’s Voltage Law</a>
-2. <a href="exp2/aim.html" style="color:black">To study and verify Parallel RC & RL Circuit.</a>
-3. <a href="exp3/aim.html" style="color:black">To study the Load Characteristics of DC shunt generator.
+1. <a href="exp1" style="color:black">To verify Kirchhoff’s Laws: Kirchhoff’s Current Law, Kirchhoff’s Voltage Law</a>
+2. <a href="exp2" style="color:black">To study and verify Parallel RC & RL Circuit.</a>
+3. <a href="exp3" style="color:black">To study the Load Characteristics of DC shunt generator.
 
 ## Broad Goal
 * The primary goal is to prepare students for successful professional career in Electrical Circuit field
