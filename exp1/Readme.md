@@ -11,8 +11,6 @@
 * To apply concepts of KCL and KVL in network theorems.
 ## Theory
 
-<figure class="video_container">
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSj7-WVxwPaovhSuLfIkuwTmXNuaFLmgqBUZ1_44tZ5sI4RTJSYmF1u1A_EIayonCMOm4e8G_RipueJ/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</figure>
+<img height="" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
 
 ## PreTest
