@@ -14,7 +14,7 @@
 <img height="400" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
 
 ## PreTest
-<img src="./theoryimage/pretestsnapshot.jpeg" alt="PreTest Quiz" style="height: 300px; width:800px;"/>
+<img src="./theoryimage/pretestsnapshot.jpeg" alt="PreTest Quiz" style="height: 350px; width:710px;"/>
 
 
 ## Procedure
@@ -24,7 +24,7 @@
 >Designed for interactivity
 
 ## PostTest
-<img src="./theoryimage/postestsnapshot.jpeg" alt="PostTestQuiz" style="height: 300px; width:800px;"/>
+<img src="./theoryimage/postestsnapshot.jpeg" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
 
 
 ## References
