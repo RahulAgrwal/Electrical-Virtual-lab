@@ -1,4 +1,4 @@
-#### Virtual Lab
+## Virtual Lab
 
 
 <b> Discipline | <b>   [Dr. D.Y. Patil Institue of Technology, Pimpri, Pune](https://engg.dypvp.edu.in/)
@@ -19,8 +19,8 @@
 
 #### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id | Github Profile
-:--|:--|:--|:--|:--|:--|:--|
+SrNo | Name | Faculty or Student | Department| Institute               | Email id | Github Profile
+:---|:---|:---|:---|:---|:---|:---|
 1 | Rahul Agarwal | Student | E&TC | Dr. D.Y. Patil Institue of Technology | rahulagarwal1126@gmail.com|https://github.com/RahulAgrwal
 2 | Jawale Kumar | Student | E&TC | Dr. D.Y. Patil Institue of Technology | ----|https://github.com/JKumar-J
 3 | Shantanu Wadgaonkar | Student | E&TC | Dr. D.Y. Patil Institue of Technology | ------|https://github.com/wadgaonkars
