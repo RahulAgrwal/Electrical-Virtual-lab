@@ -1,4 +1,4 @@
-## <h3 align="center">Virtual Lab</h3>
+#### Virtual Lab
 
 
 <b> Discipline | <b>   [Dr. D.Y. Patil Institue of Technology, Pimpri, Pune](https://engg.dypvp.edu.in/)
