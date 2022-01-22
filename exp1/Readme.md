@@ -14,3 +14,10 @@
 <img height="" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
 
 ## PreTest
+
+![App Screenshot](./theoryimage/pretestsnapshot.jpeg)
+
+## Procedure
+> [Click here to see](theoryimage/Procedure.pdf)
+
+## PostTest
