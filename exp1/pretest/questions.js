@@ -9,7 +9,8 @@ let questions = [
       "Branch",
       "Loop",
       "Mesh"
-    ]
+    ],
+    reason: "Node is a junction where two or more than two network elements meet."
   },
     {
     numb: 2,
@@ -20,7 +21,8 @@ let questions = [
       "Newtons laws",
       "Kirchhoff’s laws",
       "Faradays laws"
-    ]
+    ],
+    reason: "Kirchhoff's laws quantify how current flows through a circuit and how voltage varies around a loop in a circuit."
   },
     {
     numb: 3,
@@ -31,7 +33,8 @@ let questions = [
       "Voltage",
       "Resistance",
       "Resistivity"
-    ]
+    ],
+    reason: "Current= Voltage/ Resistance"
   },
     {
     numb: 4,
@@ -42,7 +45,8 @@ let questions = [
       "Meshes,Loops",
       "Branches, Loops",
       "Nodes,Branches"
-    ]
+    ],
+    reason:"A mesh cannot be divided further in loops."
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question
   // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
