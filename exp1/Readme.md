@@ -11,11 +11,11 @@
 * To apply concepts of KCL and KVL in network theorems.
 ## Theory
 
-<img height="200" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
+<img height="400" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
 
 ## PreTest
+<img src="./theoryimage/pretestsnapshot.jpeg" alt="PreTest Quiz" style="height: 300px; width:800px;"/>
 
-![App Screenshot](./theoryimage/pretestsnapshot.jpeg)
 
 ## Procedure
 > [Click here to see](theoryimage/Procedure.pdf)
@@ -24,7 +24,8 @@
 >Designed for interactivity
 
 ## PostTest
-![App Screenshot](./theoryimage/postestsnapshot.jpeg)
+<img src="./theoryimage/postestsnapshot.jpeg" alt="PostTestQuiz" style="height: 300px; width:800px;"/>
+
 
 ## References
 ### Books:
