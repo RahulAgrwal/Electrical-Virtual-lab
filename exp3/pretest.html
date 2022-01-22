@@ -96,8 +96,30 @@
             <li><a href="References.html">References</a></li>
         </ul>
     </div>
-
-    <div class="start_btn"><button>Start Pretest</button></div>
+    <div class="start_box">
+        <header><span class="start_title">PreTest Quiz</span></header>
+        <div style="
+          height: 60px;
+          width: 100%;
+          border-bottom: 1px solid lightgrey;
+          display: flex;
+          align-items: center;
+          padding: 0 30px;
+          border-radius: 5px 5px 0 0;
+          font-size: 20px;
+          font-weight: 600;
+          padding-right: 60px;
+          padding-top: 60px;
+          padding-bottom: 60px;
+        ">
+            Name:
+            <span style="padding-left: 20px"><input type="text" id="name" placeholder="Enter Name" /></span>
+            
+        </div>
+        <span id="incorrectname" style="color: red;"></span>
+        
+        <button class="start_btn">Start</button>
+    </div>
     <div class="info_box">
         <div class="info-title"><span>Some Rules of this Quiz</span></div>
         <div class="info-list">
