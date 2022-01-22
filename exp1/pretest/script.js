@@ -1,5 +1,5 @@
 //selecting all required elements
-const start_btn = document.querySelector(".start_btn button");
+const start_btn = document.querySelector(".start_btn ");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
 const continue_btn = info_box.querySelector(".buttons .restart");
@@ -13,9 +13,10 @@ let name = "";
 
 // if startQuiz button clicked
 start_btn.onclick = () => {
-    while (true) {
-        name = prompt("What is your Name?");
-        if (name != "") break;
+    name=document.getElementById("name").value;
+    if(name=="") {
+        document.getElementById("incorrectname").innerHTML="**Please Enter Name";
+        return false;
     }
     info_box.classList.add("activeInfo"); //show info box
 
