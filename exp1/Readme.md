@@ -11,7 +11,7 @@
 * To apply concepts of KCL and KVL in network theorems.
 ## Theory
 
-<img height="" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
+<img height="200" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
 
 ## PreTest
 
@@ -20,4 +20,20 @@
 ## Procedure
 > [Click here to see](theoryimage/Procedure.pdf)
 
+## Simulator
+>Designed for interactivity
+
 ## PostTest
+![App Screenshot](./theoryimage/postestsnapshot.jpeg)
+
+## References
+### Books:
+    1. Resnick, Robert et.al. Physics. New York: Wiley, 2002.
+    2. Electric circuits- David A.Bell, Oxford University press, Seventh Edition 2009.
+    3. IIT-JEE Physics- S.P.Arya, MTG Books, 2007.
+    4. Serway, Raymond et.al. College Physics. Australia: Thomson Brooks/Cole, 2006.
+    5. University Physics, Revised Ed, Harris Benson, Wiley-India, 2008
+### Webliography:
+    1. Wikipedia
+    2. Matrix operations. [ http://en.wikipedia.org/wiki/LU_decomposition ]
+    3. Graph theory.[ http://en.wikipedia.org/wiki/Graph_theory ]
