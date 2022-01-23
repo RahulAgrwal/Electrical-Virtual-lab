@@ -15,7 +15,10 @@
       href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="canonical" href="https://engg.dypvp.edu.in/" />
     <link rel="stylesheet" type="text/css" href="/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css" />
@@ -173,26 +176,204 @@
         <li><a href="LO.html">Objective</a></li>
         <li><a href="Theory.html">Theory</a></li>
         <li><a href="pretest.html">Pre Test</a></li>
-        <li ><a href="Procedure.html">Procedure</a></li>
+        <li><a href="Procedure.html">Procedure</a></li>
         <li class="active"><a href="Simulator.html">Simulator</a></li>
         <li><a href="postTest.html">Post Test</a></li>
         <li><a href="References.html">References</a></li>
       </ul>
     </div>
-
-    <div style="position: absolute; margin-left: 40vw; margin-top: 40px;">
-        <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;">RL Parallel Circuit</button>
-        <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;">RC Parallel Circuit</button>
-        <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;">RLC Parallel Circuit</button>
+    <div
+      style="
+        position: absolute;
+        margin-left: 10vw;
+        margin-top: 25px;
+        float: left;
+      "
+    >
+      <img
+        src="theoryimage/Onbutttoncircuit.gif"
+        style="padding-top: 0px; padding-left: 160px"
+      />
     </div>
-    <a href="simulator21.html">Click</a>
-   
-    <div style="position: absolute; margin-left: 74vw; margin-top: 40px;">
-        <button style="background-color: rgb(255, 255, 255); box-shadow: 1.5px 2.5px #424040;"
-            onclick="myFunction()">Procedure</button>
+
+    <div>
+      <button
+        id="onbutton"
+        style="
+          background-color: rgb(255, 255, 255);
+          box-shadow: 1.5px 2.5px #424040;
+          position: absolute;
+          margin-top: 365px;
+          margin-left: 218px;
+          background-color: green;
+          color: white;
+          padding: 10px 10px 10px 10px;
+        "
+      >
+        ON
+      </button>
+      <button
+        id="offbutton"
+        style="
+          background-color: rgb(255, 255, 255);
+          box-shadow: 1.5px 2.5px #424040;
+          position: absolute;
+          margin-top: 365px;
+          margin-left: 218px;
+          background-color: red;
+          color: white;
+          padding: 10px 10px 10px 10px;
+        "
+      >
+        OFF
+      </button>
+    </div>
+    <div
+      style="
+        margin-top: 0px;
+        margin-left: 800px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      "
+    >
+      DC Shunt Generator
+    </div>
+    <style>
+      .container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .box-minmax {
+        margin-top: 30px;
+        width: 608px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        color: green;
+        span:first-child {
+          margin-left: 10px;
+        }
+      }
+      .range-slider {
+        margin-top: 30vh;
+      }
+      .rs-range {
+        margin-top: 29px;
+        width: 600px;
+        -webkit-appearance: none;
+        &::-moz-focus-outer {
+          border: 0;
+        }
+      }
+      .rs-range:focus {
+        outline: none;
+      }
+      .rs-range::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        box-shadow: none;
+        background: green;
+        border-radius: 0px;
+        border: 0px solid green;
+      }
+      .rs-range::-moz-range-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        box-shadow: none;
+        background: green;
+        border-radius: 0px;
+        border: 0px solid green;
+      }
+      
+
+      .rs-range::-webkit-slider-thumb {
+          box-shadow: none;
+          border: 0px solid green;
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+          height: 42px;
+          width: 22px;
+          border-radius: 22px;
+          background: green;
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -20px;
+        }
+        
+        .rs-range::-moz-range-thumb {
+          box-shadow: none;
+          border: 0px solid green;
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+          height: 42px;
+          width: 22px;
+          border-radius: 22px;
+          background: green;
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -20px;
+        }
+      .rs-label {
+        position: relative;
+        transform-origin: center center;
+        display: block;
+        width: 98px;
+        height: 98px;
+        background: transparent;
+        border-radius: 50%;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 22px;
+        box-sizing: border-box;
+        border: 2px solid green;
+        margin-top: 20px;
+        margin-left: -38px;
+        left: attr(value);
+        color: green;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 36px;
+        &::after {
+          content: "ohms";
+          display: block;
+          font-size: 20px;
+          letter-spacing: 0.07em;
+          margin-top: -2px;
+        }
+      }
+    </style>
+    <div class="container">
+      <div class="range-slider">
+        <span id="rs-bullet" class="rs-label">0</span>
+        <input
+          id="rs-range-line"
+          class="rs-range"
+          type="range"
+          value="0"
+          min="0"
+          max="200"
+        />
+      </div>
+
+      <div class="box-minmax"><span>0</span><span>200</span></div>
+    </div>
+    <div style="position: absolute; margin-left: 74vw; margin-top: 40px">
+      <button
+        style="
+          background-color: rgb(255, 255, 255);
+          box-shadow: 1.5px 2.5px #424040;
+        "
+        onclick="myFunction()"
+      >
+        Procedure
+      </button>
     </div>
 
-
-    <script src="RLC.js"></script>
+    <script src="rangeslider.js"></script>
   </body>
 </html>
