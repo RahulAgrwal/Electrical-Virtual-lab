@@ -109,11 +109,19 @@ function myFunctionAnswer() {
   myWindow.opener.document.getElementById("demo").innerHTML = "HELLO!";
 }
 
+function roundoff(a)
+{
+       let b=a.toFixed(5);
+       return b;
+}
+
+
 //voltage Verify
 function checkvolt() {
-  let vr1 = document.getElementById("vr1").value;
-  let vr2 = document.getElementById("vr2").value;
-  let vr3 = document.getElementById("vr3").value;
+  let vr1 = parseFloat(document.getElementById("vr1").value);
+  let vr2 = parseFloat(document.getElementById("vr2").value);
+  let vr3 = parseFloat(document.getElementById("vr3").value);
+  let count1=0,count2=0,count3=0;
 
   let r1 = parseFloat(document.getElementById("R1").value);
   let r2 = parseFloat(document.getElementById("R2").value);
@@ -128,37 +136,158 @@ function checkvolt() {
   document.getElementById("vr1").classList.add("correct");
   document.getElementById("vr2").classList.add("correct");
   document.getElementById("vr3").classList.add("correct");
-  if (Math.round(vr1) == Math.round(idlevr1) && Math.round(vr2) == Math.round(idlevr2) && Math.round(vr3) == Math.round(idlevr3)) {
-    document.getElementById("voltverify").innerHTML = "Voltage Verified.";
+  if(idlevr1<1)
+{
+ 
+  let a=roundoff(idlevr1);
+  let b=roundoff(vr1);
 
+
+  if(a==b)
+  {
+    count1=count1+1;
   }
-  else {
 
-    if (Math.round(vr1) != Math.round(idlevr1)) {
-      document.getElementById("voltverify").innerHTML = "Voltage across R1 is wrong! Try again.";
-      document.getElementById("vr1").classList.add("incorrect");
-    }
-
-    if (Math.round(vr2) != Math.round(idlevr2)) {
-      document.getElementById("voltverify").innerHTML = "Voltage across R2 is wrong! Try again.";
-      document.getElementById("vr2").classList.add("incorrect");
-    }
-
-    if (Math.round(vr3) != Math.round(idlevr3)) {
-      document.getElementById("voltverify").innerHTML = "Voltage across R3 is wrong! Try again.";
-      document.getElementById("vr3").classList.add("incorrect");
-    }
+}
+else
+{
+  if (Math.round(vr1) == Math.round(idlevr1))
+  {
+    count1=count1+1;
   }
+}
+if(idlevr2<1)
+{
+ 
+  let c=roundoff(idlevr2);
+  let d=roundoff(vr2);
+
+  if(c==d)
+  {
+    count2=count2+1;
+  }
+}
+else
+{
+    if(Math.round(vr2) == Math.round(idlevr2))
+    {
+      count2=count2+1;
+    }
+
+}
+if(idlevr3<1)
+{
+ 
+  let e=roundoff(idlevr3);
+  let f=roundoff(vr3);
+
+  if(e==f)
+  {
+    count3=count3+1;
+  }
+
+}
+else
+{
+  if(Math.round(vr3) == Math.round(idlevr3))
+   {
+    count3=count3+1;
+
+   }
+}
+
+if(count2==0 && count3==0 && count1==0)
+{
+  document.getElementById("voltverify").innerHTML = "All voltages are wrong!!Try Again";
+  document.getElementById("vr2").classList.add("incorrect");
+  document.getElementById("vr3").classList.add("incorrect");
+  document.getElementById("vr1").classList.add("incorrect");
+
+}
+
+if(count1==0 && count2==0 && count3==1)
+{
+  document.getElementById("voltverify").innerHTML = " Voltage across R1 and R2 are wrong!Try Again";
+  document.getElementById("vr2").classList.add("incorrect");
+  document.getElementById("vr3").classList.add("correct");
+  document.getElementById("vr1").classList.add("incorrect");
+
+}
+
+if(count1==0 && count2==1 && count3==0)
+{
+  document.getElementById("voltverify").innerHTML = "Voltage across R1 and R3 are wrong!Try Again";
+  document.getElementById("vr2").classList.add("correct");
+  document.getElementById("vr3").classList.add("incorrect");
+  document.getElementById("vr1").classList.add("incorrect");
+
+}
+if(count1==1 && count2==0 && count3==1)
+{
+  document.getElementById("voltverify").innerHTML = " Voltage across R2 is wrong!Try Again";
+  document.getElementById("vr2").classList.add("incorrect");
+  document.getElementById("vr3").classList.add("correct");
+  document.getElementById("vr1").classList.add("correct");
+
+}
+
+
+
+
+
+if(count1==0 && count2==1 && count3==1)
+{
+  document.getElementById("voltverify").innerHTML = "Voltage across R1 is wrong!Try Again";
+  document.getElementById("vr2").classList.add("correct");
+  document.getElementById("vr3").classList.add("correct");
+  document.getElementById("vr1").classList.add("incorrect");
+
+}
+
+
+
+if(count2==0 && count3==0 && count1==1)
+{
+  document.getElementById("voltverify").innerHTML = "Voltage across R2 and R3 are wrong.Try Again";
+  document.getElementById("vr2").classList.add("incorrect");
+  document.getElementById("vr3").classList.add("incorrect");
+  document.getElementById("vr1").classList.add("correct");
+
+}
+
+if(count2==1 && count1==1 && count3==0)
+{
+  document.getElementById("voltverify").innerHTML = "Voltage across R3 is wrong.Try Again!";
+  document.getElementById("vr3").classList.add("incorrect");
+  document.getElementById("vr1").classList.add("correct");
+  document.getElementById("vr2").classList.add("correct");
+
+}
+if(count1 ==1 && count2==1 && count3==1)
+{
+  document.getElementById("voltverify").innerHTML = "<b>Voltage Verified.</b>";
+  document.getElementById("vr3").classList.add("correct");
+  document.getElementById("vr1").classList.add("correct");
+  document.getElementById("vr2").classList.add("correct");
+}
+  
+  
+
 
 
 }
 
 
+
+
+
 //Current Verify 
 function checkcur() {
-  let ir1 = document.getElementById("ir1").value;
-  let ir2 = document.getElementById("ir2").value;
-  let ir3 = document.getElementById("ir3").value;
+  let ir1 = parseFloat(document.getElementById("ir1").value);
+  let ir2 = parseFloat(document.getElementById("ir2").value);
+  let ir3 = parseFloat(document.getElementById("ir3").value);
+  let count1=0,count2=0,count3=0;
+
 
   let r1 = parseFloat(document.getElementById("R1").value);
   let r2 = parseFloat(document.getElementById("R2").value);
@@ -179,33 +308,150 @@ function checkcur() {
   document.getElementById("ir2").classList.add("correct");
   document.getElementById("ir3").classList.add("correct");
 
-  if (Math.round(ir1) == Math.round(idlecr1) && Math.round(ir2) == Math.round(idlecr2) && Math.round(ir3) == Math.round(idlecr3)) {
-    document.getElementById("curverify").innerHTML = "Current  Verified.";
+  if(idlecr1<1)
+  {
+   
+    let a=roundoff(idlecr1);
+    let b=roundoff(ir1);
+  
+  
+    if(a==b)
+    {
+      count1=count1+1;
+    }
+  
   }
-  else {
-
-    if (Math.round(ir1) != Math.round(idlecr1)) {
-      document.getElementById("curverify").innerHTML = "Current through R1 is wrong! Try again.";
-      document.getElementById("ir1").classList.add("incorrect");
-    }
-
-    if (Math.round(ir2) != Math.round(idlecr2)) {
-      document.getElementById("curverify").innerHTML = "Current through R2 is wrong! Try again.";
-      document.getElementById("ir2").classList.add("incorrect");
-    }
-
-    if (Math.round(ir3) != Math.round(idlecr3)) {
-      document.getElementById("curverify").innerHTML = "Current through R3 is wrong! Try again.";
-      document.getElementById("ir3").classList.add("incorrect");
+  else
+  {
+    if (Math.round(ir1) == Math.round(idlecr1))
+    {
+      count1=count1+1;
     }
   }
+  if(idlecr2<1)
+  {
+   
+    let c=roundoff(idlecr2);
+    let d=roundoff(ir2);
+  
+    if(c==d)
+    {
+      count2=count2+1;
+    }
+  }
+  else
+  {
+      if(Math.round(ir2) == Math.round(idlecr2))
+      {
+        count2=count2+1;
+      }
+  
+  }
+  if(idlecr3<1)
+  {
+   
+    let e=roundoff(idlecr3);
+    let f=roundoff(ir3);
+  
+    if(e==f)
+    {
+      count3=count3+1;
+    }
+  
+  }
+  else
+  {
+    if(Math.round(ir3) == Math.round(idletot))
+     {
+      count3=count3+1;
+  
+     }
+  }
+  
+  if(count2==0 && count3==0 && count1==0)
+  {
+    document.getElementById("curverify").innerHTML = "All currents are wrong!!Try Again";
+    document.getElementById("ir2").classList.add("incorrect");
+    document.getElementById("ir3").classList.add("incorrect");
+    document.getElementById("ir1").classList.add("incorrect");
+  
+  }
+  
+  if(count1==0 && count2==0 && count3==1)
+  {
+    document.getElementById("curverify").innerHTML = " Current through R1 and R2 are wrong!Try Again";
+    document.getElementById("ir2").classList.add("incorrect");
+    document.getElementById("ir3").classList.add("correct");
+    document.getElementById("ir1").classList.add("incorrect");
+  
+  }
+  
+  if(count1==0 && count2==1 && count3==0)
+  {
+    document.getElementById("curverify").innerHTML = " Current through R1 and R3 are wrong!Try Again";
+    document.getElementById("ir2").classList.add("correct");
+    document.getElementById("ir3").classList.add("incorrect");
+    document.getElementById("ir1").classList.add("incorrect");
+  
+  }
+  if(count1==1 && count2==0 && count3==1)
+  {
+    document.getElementById("curverify").innerHTML = " Current through R2 is wrong!Try Again";
+    document.getElementById("ir2").classList.add("incorrect");
+    document.getElementById("ir3").classList.add("correct");
+    document.getElementById("ir1").classList.add("correct");
+  
+  }
+  
+  
+  
+  
+  
+  if(count1==0 && count2==1 && count3==1)
+  {
+    document.getElementById("curverify").innerHTML = " Current through R1 is wrong!Try Again";
+    document.getElementById("ir2").classList.add("correct");
+    document.getElementById("ir3").classList.add("correct");
+    document.getElementById("ir1").classList.add("incorrect");
+  
+  }
+  
+  
+  
+  if(count2==0 && count3==0 && count1==1)
+  {
+    document.getElementById("curverify").innerHTML = "Current through R2 and R3 are wrong.Try Again";
+    document.getElementById("ir2").classList.add("incorrect");
+    document.getElementById("ir3").classList.add("incorrect");
+    document.getElementById("ir1").classList.add("correct");
+  
+  }
+  
+  if(count2==1 && count1==1 && count3==0)
+  {
+    document.getElementById("curverify").innerHTML = "Current through R3 is wrong.Try Again!";
+    document.getElementById("ir3").classList.add("incorrect");
+    document.getElementById("ir1").classList.add("correct");
+    document.getElementById("ir2").classList.add("correct");
+  
+  }
+  if(count1 ==1 && count2==1 && count3==1)
+  {
+    document.getElementById("curverify").innerHTML = "<b>Current  Verified.</b>";
+    document.getElementById("ir3").classList.add("correct");
+    document.getElementById("ir1").classList.add("correct");
+    document.getElementById("ir2").classList.add("correct");
+  }
+  
 }
 
 //Power Verify
 function checkpow() {
-  let pr1 = document.getElementById("pr1").value;
-  let pr2 = document.getElementById("pr2").value;
-  let pr3 = document.getElementById("pr3").value;
+  let pr1 = parseFloat(document.getElementById("pr1").value);
+  let pr2 = parseFloat(document.getElementById("pr2").value);
+  let pr3 = parseFloat(document.getElementById("pr3").value);
+  let count1=0,count2=0,count3=0;
+
 
   let r1 = parseFloat(document.getElementById("R1").value);
   let r2 = parseFloat(document.getElementById("R2").value);
@@ -230,28 +476,140 @@ function checkpow() {
   document.getElementById("pr2").classList.add("correct");
   document.getElementById("pr3").classList.add("correct");
 
-  if (Math.round(pr1) == Math.round(idlepr1) && Math.round(pr2) == Math.round(idlepr2) && Math.round(pr3) == Math.round(idlepr3)) {
-    document.getElementById("powverify").innerHTML = "Power Verified.";
-  }
-  else {
+  if(idlepr1<1)
+{
+ 
+  let a=roundoff(idlepr1);
+  let b=roundoff(pr1);
 
-    if (Math.round(pr1) != Math.round(idlepr1)) {
-      document.getElementById("powverify").innerHTML = "Power in R1 is wrong! Try again.";
-      document.getElementById("pr1").classList.add("incorrect");
 
-    }
-
-    if (Math.round(pr2) != Math.round(idlepr2)) {
-      document.getElementById("powverify").innerHTML = "Power in R2 is wrong! Try again.";
-      document.getElementById("pr2").classList.add("incorrect");
-    }
-
-    if (Math.round(pr3) != Math.round(idlepr3)) {
-      document.getElementById("powverify").innerHTML = "Power in R3 is wrong! Try again.";
-      document.getElementById("pr3").classList.add("incorrect");
-    }
+  if(a==b)
+  {
+    count1=count1+1;
   }
 
+}
+else
+{
+  if (Math.round(pr1) == Math.round(idlepr1))
+  {
+    count1=count1+1;
+  }
+}
+if(idlepr2<1)
+{
+ 
+  let c=roundoff(idlepr2);
+  let d=roundoff(pr2);
+
+  if(c==d)
+  {
+    count2=count2+1;
+  }
+}
+else
+{
+    if(Math.round(pr2) == Math.round(idlepr2))
+    {
+      count2=count2+1;
+    }
+
+}
+if(idlepr3<1)
+{
+ 
+  let e=roundoff(idlepr3);
+  let f=roundoff(pr3);
+
+  if(e==f)
+  {
+    count3=count3+1;
+  }
+
+}
+else
+{
+  if(Math.round(pr3) == Math.round(idlepr3))
+   {
+    count3=count3+1;
+
+   }
+}
+
+if(count2==0 && count3==0 && count1==0)
+{
+  document.getElementById("powverify").innerHTML = "All powers are wrong!!Try Again";
+  document.getElementById("pr2").classList.add("incorrect");
+  document.getElementById("pr3").classList.add("incorrect");
+  document.getElementById("pr1").classList.add("incorrect");
+
+}
+
+if(count1==0 && count2==0 && count3==1)
+{
+  document.getElementById("powverify").innerHTML = " Powers in R1 and R2 are wrong!Try Again";
+  document.getElementById("pr2").classList.add("incorrect");
+  document.getElementById("pr3").classList.add("correct");
+  document.getElementById("pr1").classList.add("incorrect");
+
+}
+
+if(count1==0 && count2==1 && count3==0)
+{
+  document.getElementById("powverify").innerHTML = "Powers in R1 and R3 are wrong!Try Again";
+  document.getElementById("pr2").classList.add("correct");
+  document.getElementById("pr3").classList.add("incorrect");
+  document.getElementById("pr1").classList.add("incorrect");
+
+}
+if(count1==1 && count2==0 && count3==1)
+{
+  document.getElementById("powverify").innerHTML = " Power in R2 is wrong!Try Again";
+  document.getElementById("pr2").classList.add("incorrect");
+  document.getElementById("pr3").classList.add("correct");
+  document.getElementById("pr1").classList.add("correct");
+
+}
+
+
+
+
+
+if(count1==0 && count2==1 && count3==1)
+{
+  document.getElementById("powverify").innerHTML = "Power in R1 is wrong!Try Again";
+  document.getElementById("pr2").classList.add("correct");
+  document.getElementById("pr3").classList.add("correct");
+  document.getElementById("pr1").classList.add("incorrect");
+
+}
+
+
+
+if(count2==0 && count3==0 && count1==1)
+{
+  document.getElementById("powverify").innerHTML = "Powers in R2 and R3 are wrong.Try Again";
+  document.getElementById("pr2").classList.add("incorrect");
+  document.getElementById("pr3").classList.add("incorrect");
+  document.getElementById("pr1").classList.add("correct");
+
+}
+
+if(count2==1 && count1==1 && count3==0)
+{
+  document.getElementById("powverify").innerHTML = "Powers in R3 is wrong.Try Again!";
+  document.getElementById("pr3").classList.add("incorrect");
+  document.getElementById("pr1").classList.add("correct");
+  document.getElementById("pr2").classList.add("correct");
+
+}
+if(count1 ==1 && count2==1 && count3==1)
+{
+  document.getElementById("powverify").innerHTML = "<b>Power  Verified.</b>";
+  document.getElementById("pr3").classList.add("correct");
+  document.getElementById("pr1").classList.add("correct");
+  document.getElementById("pr2").classList.add("correct");
+}
 
 
 }
