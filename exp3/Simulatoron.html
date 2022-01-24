@@ -228,7 +228,7 @@
     </div>
     <div style="position: absolute; margin-top: -350px; margin-left: 950px; font-weight: 900; background-color: rgb(230, 216, 25); padding: 10px 10px 10px 10px;">
       <div style="padding-left: 18px;">Armature Readings</div>
-      <div>Current Reading :  <span id="curarm">1.2</span> Amps</div>
+      <div> Load Current   :  <span id="curarm">1.2</span> Amps</div>
       <div>Voltage Reading :  <span id="volarm">220</span> Volt</div>
     
     </div>
@@ -386,8 +386,8 @@
               <tr>
                   <th style="padding-left: 10px;">S.No.</th>
                   <th style="padding-left: 10px;">Load Bulb</th>
-                  <th style="padding: 0;">Current(in amp)</th>
-                  <th>Volatge(in Volts)</th>
+                  <th style="padding: 0;"> Load Current(in amp)</th>
+                  <th>   Volatge(in Volts)</th>
               </tr>
           </thead>
           <tbody>
@@ -440,8 +440,13 @@
 <div style="position: absolute;margin-top: -200px; margin-left: 1300px; font-weight: 900;">
 <button id="reset" onclick="reset()" style="margin-bottom: 10px;">Reset</button><br>
 <button id="plotgraph" onclick="plot()">Plot Graph</button>
-
 </div>
+<div style="margin-left: 400px; background-color: rgb(253, 253, 252); margin-right: 500px; align-items: center; padding:20px 20px 20px 20px; padding-left: 90px;">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+  <span id="graph" style="font-weight: bold; font-style: normal; padding-left: 60px;" ></span>
+</div>
+
   <script src="simulator.js"></script>
   </body>
 </html>
