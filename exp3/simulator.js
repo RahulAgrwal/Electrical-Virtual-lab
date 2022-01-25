@@ -9,7 +9,11 @@ var A2 = [1.2,2.8,3.2,3.6,5.5,7,8.1,10.2,11,12.7];
 var V2 = [220,212,208,205,200,195,189,184,179,176];
 
 var tempindex=[1];
- 
+
+function myFunction() {
+  const myWindow = window.open("./theoryimage/procedure.pdf", "", "width=600,height=300");
+
+}
 
 function showSliderValue() {
   rangeBullet.innerHTML = rangeSlider.value;
