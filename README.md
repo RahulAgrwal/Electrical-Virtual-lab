@@ -23,5 +23,5 @@ SrNo | Name | Faculty or Student | Department| Email id | Github Profile
 :---:|----------------------|:---:|:---:|:---:|:---:|
 1 | Rahul Agarwal | Student | E&TC |rahulagarwal1126@gmail.com|https://github.com/RahulAgrwal
 2 | Jawale Kumar | Student | E&TC  |kumarbjawale11122@gmail.com|https://github.com/JKumar-J
-3 | Shantanu Wadgaonkar | Student | E&TC  |------|https://github.com/wadgaonkars
+3 | Shantanu Wadgaonkar | Student | E&TC  |shantanuwadgaonkar0@yahoo.com|https://github.com/wadgaonkars
 <br>
