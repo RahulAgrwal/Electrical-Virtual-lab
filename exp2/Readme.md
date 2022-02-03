@@ -1,14 +1,11 @@
 
-## Experiment 1
+## Experiment 2
 ## Aim 
->To verify the Kirchhoff’s voltage law and Kirchhoff’s current law for the given circuit.
+>To study and verify Parallel RC & RL Circuit.
 
 ## Objective
-* To measure voltage and current in a DC circuit for each element.
-* To calculate analytically V and I.
-* Compare analytical and practical values.
-* Verify KCL and KVL.
-* To apply concepts of KCL and KVL in network theorems.
+* To design parallel RC circuit and find out the current flowing through each component.
+* To design parallel RL circuit and find out the current flowing through each component.
 ## Theory
 
 ><img height="400" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
