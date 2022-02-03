@@ -1,27 +1,26 @@
 
-## Experiment 1
+## Experiment 3
 ## Aim 
->To verify the Kirchhoff’s voltage law and Kirchhoff’s current law for the given circuit.
+>To study the load characterstics of DC Shunt Generator.
+Draw the internal characteristics and external characteristics under different loading condition.
 
 ## Objective
-* To measure voltage and current in a DC circuit for each element.
-* To calculate analytically V and I.
-* Compare analytical and practical values.
-* Verify KCL and KVL.
-* To apply concepts of KCL and KVL in network theorems.
+* To understand DC Shunt Motor.
+* To write DC Shunt Motor Load Characteristics.
+* To determine internal and external characterstics of DC Shunt generator.
+  
 ## Theory
-
-><img height="400" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
+><img height="400" alt="GIF" src="./theoryimage/exp3Theroy.gif" />
 
 ## PreTest
-><img src="./theoryimage/pretestsnapshot.png" alt="PreTest Quiz" style="height: 350px; width:710px;"/>
+><img src="./theoryimage/pretestsnapshot.jpeg" alt="PreTest Quiz" style="height: 350px; width:710px;"/>
 
 
 ## Procedure
 > [Click here to see](theoryimage/Procedure.pdf)
 
 ## Simulator
-><img src="./theoryimage/simulatorsnap.jpeg" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
+><img src="./theoryimage/simulatorsnap.png" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
 
 ## PostTest
 ><img src="./theoryimage/postestsnapshot.png" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
