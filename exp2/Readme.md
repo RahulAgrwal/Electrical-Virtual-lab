@@ -8,7 +8,7 @@
 * To design parallel RL circuit and find out the current flowing through each component.
 ## Theory
 
-><img height="400" alt="GIF" src="./theoryimage/exp1Theroy.gif" />
+><img height="400" alt="GIF" src="./theoryimage/exp2Theroy.gif" />
 
 ## PreTest
 ><img src="./theoryimage/pretestsnapshot.jpeg" alt="PreTest Quiz" style="height: 350px; width:710px;"/>
@@ -18,8 +18,7 @@
 > [Click here to see](theoryimage/Procedure.pdf)
 
 ## Simulator
->
-<img src="./theoryimage/simulatorsnap.jpeg" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
+><img src="./theoryimage/simulatorsnap.jpeg" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
 
 ## PostTest
 ><img src="./theoryimage/postestsnapshot.jpeg" alt="PostTestQuiz" style="height: 350px; width:710px;"/>

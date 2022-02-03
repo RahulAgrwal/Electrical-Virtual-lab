@@ -21,8 +21,7 @@
 > [Click here to see](theoryimage/Procedure.pdf)
 
 ## Simulator
->
-<img src="./theoryimage/simulatorsnap.jpeg" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
+><img src="./theoryimage/simulatorsnap.jpeg" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
 
 ## PostTest
 ><img src="./theoryimage/postestsnapshot.jpeg" alt="PostTestQuiz" style="height: 350px; width:710px;"/>
