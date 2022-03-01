@@ -106,7 +106,7 @@ let v = parseFloat(document.getElementById("vin").value);
 
 function myFunctionAnswer() {
   const myWindow = window.open("./simulator_ans.html", "", "width=600,height=300");
-  myWindow.opener.document.getElementById("demo").innerHTML = "HELLO!";
+  //myWindow.opener.document.getElementById("demo").innerHTML = "HELLO!";
 }
 
 function roundoff(a)
@@ -361,7 +361,7 @@ function checkcur() {
   }
   else
   {
-    if(Math.round(ir3) == Math.round(idletot))
+    if(Math.round(ir3) == Math.round(idlecr3))
      {
       count3=count3+1;
   
