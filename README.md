@@ -6,7 +6,8 @@
 <b>Department | <b> [Electronics & Telecommunication](https://engg.dypvp.edu.in/electronics-telecommunication.aspx)
 <b> Lab | <b> Electrical Circuit Virtual Lab
 
-##Live Demo: https://electrical-virtual-lab.netlify.app/
+## Live Demo: https://electrical-virtual-lab.netlify.app/
+  
 ## List of Experiments
 1. <a href="exp1" style="color:black">To verify Kirchhoff’s Laws: Kirchhoff’s Current Law, Kirchhoff’s Voltage Law</a>
 2. <a href="exp2" style="color:black">To study and verify Parallel RC & RL Circuit.</a>
